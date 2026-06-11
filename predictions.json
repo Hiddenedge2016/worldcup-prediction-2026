@@ -1,0 +1,3470 @@
+{
+  "A": {
+    "matches": [
+      {
+        "home": "MEX",
+        "away": "RSA",
+        "homeName": "墨西哥",
+        "awayName": "南非",
+        "xg": {
+          "home": "1.755",
+          "away": "0.890"
+        },
+        "bestScore": "1-0",
+        "bestProb": "12.5",
+        "top5": [
+          {
+            "score": "1-0",
+            "prob": "12.5"
+          },
+          {
+            "score": "1-1",
+            "prob": "11.1"
+          },
+          {
+            "score": "2-0",
+            "prob": "10.9"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.7"
+          },
+          {
+            "score": "0-0",
+            "prob": "7.1"
+          }
+        ],
+        "winProb": {
+          "homeWin": "57.8",
+          "draw": "23.4",
+          "awayWin": "18.8"
+        }
+      },
+      {
+        "home": "KOR",
+        "away": "CZE",
+        "homeName": "韩国",
+        "awayName": "捷克",
+        "xg": {
+          "home": "1.129",
+          "away": "1.283"
+        },
+        "bestScore": "1-1",
+        "bestProb": "13.0",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "13.0"
+          },
+          {
+            "score": "0-1",
+            "prob": "11.5"
+          },
+          {
+            "score": "1-0",
+            "prob": "10.1"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.0"
+          },
+          {
+            "score": "1-2",
+            "prob": "8.3"
+          }
+        ],
+        "winProb": {
+          "homeWin": "32.6",
+          "draw": "27.5",
+          "awayWin": "40.0"
+        }
+      },
+      {
+        "home": "MEX",
+        "away": "KOR",
+        "homeName": "墨西哥",
+        "awayName": "韩国",
+        "xg": {
+          "home": "1.552",
+          "away": "1.020"
+        },
+        "bestScore": "1-1",
+        "bestProb": "12.1",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "12.1"
+          },
+          {
+            "score": "1-0",
+            "prob": "11.9"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.4"
+          },
+          {
+            "score": "2-0",
+            "prob": "9.2"
+          },
+          {
+            "score": "0-1",
+            "prob": "7.8"
+          }
+        ],
+        "winProb": {
+          "homeWin": "49.7",
+          "draw": "25.4",
+          "awayWin": "24.9"
+        }
+      },
+      {
+        "home": "Q4",
+        "away": "RSA",
+        "homeName": "欧预D胜者",
+        "awayName": "南非",
+        "xg": {
+          "home": "1.350",
+          "away": "1.062"
+        },
+        "bestScore": "1-1",
+        "bestProb": "12.9",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "12.9"
+          },
+          {
+            "score": "1-0",
+            "prob": "12.1"
+          },
+          {
+            "score": "0-1",
+            "prob": "9.5"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.0"
+          },
+          {
+            "score": "2-1",
+            "prob": "8.7"
+          }
+        ],
+        "winProb": {
+          "homeWin": "43.3",
+          "draw": "27.2",
+          "awayWin": "29.4"
+        }
+      },
+      {
+        "home": "CZE",
+        "away": "MEX",
+        "homeName": "捷克",
+        "awayName": "墨西哥",
+        "xg": {
+          "home": "1.076",
+          "away": "1.335"
+        },
+        "bestScore": "1-1",
+        "bestProb": "12.9",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "12.9"
+          },
+          {
+            "score": "0-1",
+            "prob": "12.0"
+          },
+          {
+            "score": "1-0",
+            "prob": "9.7"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.0"
+          },
+          {
+            "score": "1-2",
+            "prob": "8.6"
+          }
+        ],
+        "winProb": {
+          "homeWin": "30.1",
+          "draw": "27.3",
+          "awayWin": "42.6"
+        }
+      },
+      {
+        "home": "Q4",
+        "away": "KOR",
+        "homeName": "欧预D胜者",
+        "awayName": "韩国",
+        "xg": {
+          "home": "1.194",
+          "away": "1.216"
+        },
+        "bestScore": "1-1",
+        "bestProb": "13.0",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "13.0"
+          },
+          {
+            "score": "0-1",
+            "prob": "10.9"
+          },
+          {
+            "score": "1-0",
+            "prob": "10.7"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.0"
+          },
+          {
+            "score": "1-2",
+            "prob": "7.9"
+          }
+        ],
+        "winProb": {
+          "homeWin": "35.7",
+          "draw": "27.6",
+          "awayWin": "36.7"
+        }
+      },
+      {
+        "home": "RSA",
+        "away": "CZE",
+        "homeName": "南非",
+        "awayName": "捷克",
+        "xg": {
+          "home": "0.986",
+          "away": "1.450"
+        },
+        "bestScore": "0-1",
+        "bestProb": "12.7",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "12.7"
+          },
+          {
+            "score": "1-1",
+            "prob": "12.5"
+          },
+          {
+            "score": "0-2",
+            "prob": "9.2"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.1"
+          },
+          {
+            "score": "0-0",
+            "prob": "8.8"
+          }
+        ],
+        "winProb": {
+          "homeWin": "25.7",
+          "draw": "26.5",
+          "awayWin": "47.8"
+        }
+      },
+      {
+        "home": "KOR",
+        "away": "Q4",
+        "homeName": "韩国",
+        "awayName": "欧预D胜者",
+        "xg": {
+          "home": "1.216",
+          "away": "1.194"
+        },
+        "bestScore": "1-1",
+        "bestProb": "13.0",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "13.0"
+          },
+          {
+            "score": "1-0",
+            "prob": "10.9"
+          },
+          {
+            "score": "0-1",
+            "prob": "10.7"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.0"
+          },
+          {
+            "score": "2-1",
+            "prob": "7.9"
+          }
+        ],
+        "winProb": {
+          "homeWin": "36.7",
+          "draw": "27.6",
+          "awayWin": "35.7"
+        }
+      }
+    ],
+    "standings": [
+      {
+        "code": "MEX",
+        "name": "墨西哥",
+        "firstPct": "32.8",
+        "secondPct": "24.8",
+        "advancePct": "57.7",
+        "avgPoints": "5.2"
+      },
+      {
+        "code": "KOR",
+        "name": "韩国",
+        "firstPct": "25.7",
+        "secondPct": "20.4",
+        "advancePct": "46.1",
+        "avgPoints": "5.0"
+      },
+      {
+        "code": "CZE",
+        "name": "捷克",
+        "firstPct": "18.6",
+        "secondPct": "20.7",
+        "advancePct": "39.3",
+        "avgPoints": "4.4"
+      },
+      {
+        "code": "Q4",
+        "name": "欧预D胜者",
+        "firstPct": "15.8",
+        "secondPct": "21.2",
+        "advancePct": "37.0",
+        "avgPoints": "4.3"
+      },
+      {
+        "code": "RSA",
+        "name": "南非",
+        "firstPct": "7.1",
+        "secondPct": "12.8",
+        "advancePct": "19.9",
+        "avgPoints": "3.0"
+      }
+    ]
+  },
+  "B": {
+    "matches": [
+      {
+        "home": "CAN",
+        "away": "BIH",
+        "homeName": "加拿大",
+        "awayName": "波黑",
+        "xg": {
+          "home": "1.473",
+          "away": "1.045"
+        },
+        "bestScore": "1-1",
+        "bestProb": "12.4",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "12.4"
+          },
+          {
+            "score": "1-0",
+            "prob": "11.9"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.1"
+          },
+          {
+            "score": "2-0",
+            "prob": "8.7"
+          },
+          {
+            "score": "0-1",
+            "prob": "8.4"
+          }
+        ],
+        "winProb": {
+          "homeWin": "47.0",
+          "draw": "26.1",
+          "awayWin": "26.9"
+        }
+      },
+      {
+        "home": "QAT",
+        "away": "SUI",
+        "homeName": "卡塔尔",
+        "awayName": "瑞士",
+        "xg": {
+          "home": "0.862",
+          "away": "1.584"
+        },
+        "bestScore": "0-1",
+        "bestProb": "13.7",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "13.7"
+          },
+          {
+            "score": "1-1",
+            "prob": "11.8"
+          },
+          {
+            "score": "0-2",
+            "prob": "10.9"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.4"
+          },
+          {
+            "score": "0-0",
+            "prob": "8.7"
+          }
+        ],
+        "winProb": {
+          "homeWin": "20.4",
+          "draw": "25.2",
+          "awayWin": "54.4"
+        }
+      },
+      {
+        "home": "SUI",
+        "away": "BIH",
+        "homeName": "瑞士",
+        "awayName": "波黑",
+        "xg": {
+          "home": "1.485",
+          "away": "0.898"
+        },
+        "bestScore": "1-0",
+        "bestProb": "13.7",
+        "top5": [
+          {
+            "score": "1-0",
+            "prob": "13.7"
+          },
+          {
+            "score": "1-1",
+            "prob": "12.3"
+          },
+          {
+            "score": "2-0",
+            "prob": "10.2"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.2"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.1"
+          }
+        ],
+        "winProb": {
+          "homeWin": "50.9",
+          "draw": "26.3",
+          "awayWin": "22.8"
+        }
+      },
+      {
+        "home": "CAN",
+        "away": "QAT",
+        "homeName": "加拿大",
+        "awayName": "卡塔尔",
+        "xg": {
+          "home": "1.571",
+          "away": "1.004"
+        },
+        "bestScore": "1-1",
+        "bestProb": "12.0",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "12.0"
+          },
+          {
+            "score": "1-0",
+            "prob": "12.0"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.4"
+          },
+          {
+            "score": "2-0",
+            "prob": "9.4"
+          },
+          {
+            "score": "0-1",
+            "prob": "7.6"
+          }
+        ],
+        "winProb": {
+          "homeWin": "50.5",
+          "draw": "25.3",
+          "awayWin": "24.2"
+        }
+      },
+      {
+        "home": "SUI",
+        "away": "CAN",
+        "homeName": "瑞士",
+        "awayName": "加拿大",
+        "xg": {
+          "home": "1.296",
+          "away": "1.042"
+        },
+        "bestScore": "1-1",
+        "bestProb": "13.0",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "13.0"
+          },
+          {
+            "score": "1-0",
+            "prob": "12.5"
+          },
+          {
+            "score": "0-1",
+            "prob": "10.1"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.6"
+          },
+          {
+            "score": "2-1",
+            "prob": "8.4"
+          }
+        ],
+        "winProb": {
+          "homeWin": "42.3",
+          "draw": "27.8",
+          "awayWin": "29.9"
+        }
+      },
+      {
+        "home": "BIH",
+        "away": "QAT",
+        "homeName": "波黑",
+        "awayName": "卡塔尔",
+        "xg": {
+          "home": "1.278",
+          "away": "1.150"
+        },
+        "bestScore": "1-1",
+        "bestProb": "13.0",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "13.0"
+          },
+          {
+            "score": "1-0",
+            "prob": "11.3"
+          },
+          {
+            "score": "0-1",
+            "prob": "10.1"
+          },
+          {
+            "score": "0-0",
+            "prob": "8.8"
+          },
+          {
+            "score": "2-1",
+            "prob": "8.3"
+          }
+        ],
+        "winProb": {
+          "homeWin": "39.4",
+          "draw": "27.4",
+          "awayWin": "33.2"
+        }
+      },
+      {
+        "home": "Q1",
+        "away": "QAT",
+        "homeName": "欧预A胜者",
+        "awayName": "卡塔尔",
+        "xg": {
+          "home": "1.380",
+          "away": "1.062"
+        },
+        "bestScore": "1-1",
+        "bestProb": "12.7",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "12.7"
+          },
+          {
+            "score": "1-0",
+            "prob": "12.0"
+          },
+          {
+            "score": "0-1",
+            "prob": "9.2"
+          },
+          {
+            "score": "2-1",
+            "prob": "8.8"
+          },
+          {
+            "score": "0-0",
+            "prob": "8.7"
+          }
+        ],
+        "winProb": {
+          "homeWin": "44.2",
+          "draw": "27.0",
+          "awayWin": "28.9"
+        }
+      },
+      {
+        "home": "Q1",
+        "away": "SUI",
+        "homeName": "欧预A胜者",
+        "awayName": "瑞士",
+        "xg": {
+          "home": "0.970",
+          "away": "1.371"
+        },
+        "bestScore": "0-1",
+        "bestProb": "13.2",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "13.2"
+          },
+          {
+            "score": "1-1",
+            "prob": "12.8"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.6"
+          },
+          {
+            "score": "1-0",
+            "prob": "9.3"
+          },
+          {
+            "score": "0-2",
+            "prob": "9.0"
+          }
+        ],
+        "winProb": {
+          "homeWin": "26.6",
+          "draw": "27.4",
+          "awayWin": "46.1"
+        }
+      }
+    ],
+    "standings": [
+      {
+        "code": "SUI",
+        "name": "瑞士",
+        "firstPct": "52.7",
+        "secondPct": "21.3",
+        "advancePct": "74.0",
+        "avgPoints": "6.9"
+      },
+      {
+        "code": "CAN",
+        "name": "加拿大",
+        "firstPct": "20.0",
+        "secondPct": "29.3",
+        "advancePct": "49.3",
+        "avgPoints": "4.6"
+      },
+      {
+        "code": "QAT",
+        "name": "卡塔尔",
+        "firstPct": "14.6",
+        "secondPct": "20.5",
+        "advancePct": "35.0",
+        "avgPoints": "4.3"
+      },
+      {
+        "code": "BIH",
+        "name": "波黑",
+        "firstPct": "9.4",
+        "secondPct": "17.2",
+        "advancePct": "26.6",
+        "avgPoints": "3.5"
+      },
+      {
+        "code": "Q1",
+        "name": "欧预A胜者",
+        "firstPct": "3.3",
+        "secondPct": "11.8",
+        "advancePct": "15.0",
+        "avgPoints": "2.6"
+      }
+    ]
+  },
+  "C": {
+    "matches": [
+      {
+        "home": "BRA",
+        "away": "MAR",
+        "homeName": "巴西",
+        "awayName": "摩洛哥",
+        "xg": {
+          "home": "1.396",
+          "away": "1.003"
+        },
+        "bestScore": "1-1",
+        "bestProb": "12.7",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "12.7"
+          },
+          {
+            "score": "1-0",
+            "prob": "12.7"
+          },
+          {
+            "score": "0-1",
+            "prob": "9.1"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.1"
+          },
+          {
+            "score": "2-1",
+            "prob": "8.9"
+          }
+        ],
+        "winProb": {
+          "homeWin": "46.0",
+          "draw": "27.0",
+          "awayWin": "27.0"
+        }
+      },
+      {
+        "home": "HAI",
+        "away": "SCO",
+        "homeName": "海地",
+        "awayName": "苏格兰",
+        "xg": {
+          "home": "0.780",
+          "away": "1.906"
+        },
+        "bestScore": "0-1",
+        "bestProb": "13.0",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "13.0"
+          },
+          {
+            "score": "0-2",
+            "prob": "12.4"
+          },
+          {
+            "score": "1-1",
+            "prob": "10.1"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.7"
+          },
+          {
+            "score": "0-3",
+            "prob": "7.9"
+          }
+        ],
+        "winProb": {
+          "homeWin": "14.6",
+          "draw": "21.4",
+          "awayWin": "63.9"
+        }
+      },
+      {
+        "home": "SCO",
+        "away": "MAR",
+        "homeName": "苏格兰",
+        "awayName": "摩洛哥",
+        "xg": {
+          "home": "0.953",
+          "away": "1.396"
+        },
+        "bestScore": "0-1",
+        "bestProb": "13.3",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "13.3"
+          },
+          {
+            "score": "1-1",
+            "prob": "12.7"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.5"
+          },
+          {
+            "score": "0-2",
+            "prob": "9.3"
+          },
+          {
+            "score": "1-0",
+            "prob": "9.1"
+          }
+        ],
+        "winProb": {
+          "homeWin": "25.7",
+          "draw": "27.1",
+          "awayWin": "47.2"
+        }
+      },
+      {
+        "home": "BRA",
+        "away": "HAI",
+        "homeName": "巴西",
+        "awayName": "海地",
+        "xg": {
+          "home": "2.793",
+          "away": "0.560"
+        },
+        "bestScore": "2-0",
+        "bestProb": "13.6",
+        "top5": [
+          {
+            "score": "2-0",
+            "prob": "13.6"
+          },
+          {
+            "score": "3-0",
+            "prob": "12.7"
+          },
+          {
+            "score": "1-0",
+            "prob": "9.8"
+          },
+          {
+            "score": "4-0",
+            "prob": "8.9"
+          },
+          {
+            "score": "2-1",
+            "prob": "7.6"
+          }
+        ],
+        "winProb": {
+          "homeWin": "83.2",
+          "draw": "11.5",
+          "awayWin": "5.0"
+        }
+      },
+      {
+        "home": "SCO",
+        "away": "BRA",
+        "homeName": "苏格兰",
+        "awayName": "巴西",
+        "xg": {
+          "home": "0.855",
+          "away": "1.746"
+        },
+        "bestScore": "0-1",
+        "bestProb": "13.0",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "13.0"
+          },
+          {
+            "score": "0-2",
+            "prob": "11.3"
+          },
+          {
+            "score": "1-1",
+            "prob": "11.1"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.7"
+          },
+          {
+            "score": "0-0",
+            "prob": "7.4"
+          }
+        ],
+        "winProb": {
+          "homeWin": "18.1",
+          "draw": "23.4",
+          "awayWin": "58.5"
+        }
+      },
+      {
+        "home": "MAR",
+        "away": "HAI",
+        "homeName": "摩洛哥",
+        "awayName": "海地",
+        "xg": {
+          "home": "2.234",
+          "away": "0.624"
+        },
+        "bestScore": "2-0",
+        "bestProb": "14.3",
+        "top5": [
+          {
+            "score": "2-0",
+            "prob": "14.3"
+          },
+          {
+            "score": "1-0",
+            "prob": "12.8"
+          },
+          {
+            "score": "3-0",
+            "prob": "10.7"
+          },
+          {
+            "score": "2-1",
+            "prob": "8.9"
+          },
+          {
+            "score": "1-1",
+            "prob": "8.0"
+          }
+        ],
+        "winProb": {
+          "homeWin": "74.1",
+          "draw": "17.0",
+          "awayWin": "8.8"
+        }
+      }
+    ],
+    "standings": [
+      {
+        "code": "BRA",
+        "name": "巴西",
+        "firstPct": "56.6",
+        "secondPct": "27.7",
+        "advancePct": "84.3",
+        "avgPoints": "6.3"
+      },
+      {
+        "code": "MAR",
+        "name": "摩洛哥",
+        "firstPct": "29.6",
+        "secondPct": "40.7",
+        "advancePct": "70.3",
+        "avgPoints": "5.2"
+      },
+      {
+        "code": "SCO",
+        "name": "苏格兰",
+        "firstPct": "12.9",
+        "secondPct": "26.5",
+        "advancePct": "39.4",
+        "avgPoints": "3.9"
+      },
+      {
+        "code": "HAI",
+        "name": "海地",
+        "firstPct": "0.9",
+        "secondPct": "5.1",
+        "advancePct": "6.0",
+        "avgPoints": "1.3"
+      }
+    ]
+  },
+  "D": {
+    "matches": [
+      {
+        "home": "USA",
+        "away": "PAR",
+        "homeName": "美国",
+        "awayName": "巴拉圭",
+        "xg": {
+          "home": "1.358",
+          "away": "1.020"
+        },
+        "bestScore": "1-1",
+        "bestProb": "12.8",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "12.8"
+          },
+          {
+            "score": "1-0",
+            "prob": "12.6"
+          },
+          {
+            "score": "0-1",
+            "prob": "9.5"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.3"
+          },
+          {
+            "score": "2-1",
+            "prob": "8.7"
+          }
+        ],
+        "winProb": {
+          "homeWin": "44.5",
+          "draw": "27.3",
+          "awayWin": "28.2"
+        }
+      },
+      {
+        "home": "AUS",
+        "away": "TUR",
+        "homeName": "澳大利亚",
+        "awayName": "土耳其",
+        "xg": {
+          "home": "1.031",
+          "away": "1.426"
+        },
+        "bestScore": "1-1",
+        "bestProb": "12.6",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "12.6"
+          },
+          {
+            "score": "0-1",
+            "prob": "12.2"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.0"
+          },
+          {
+            "score": "1-0",
+            "prob": "8.8"
+          },
+          {
+            "score": "0-2",
+            "prob": "8.7"
+          }
+        ],
+        "winProb": {
+          "homeWin": "27.3",
+          "draw": "26.6",
+          "awayWin": "46.1"
+        }
+      },
+      {
+        "home": "USA",
+        "away": "AUS",
+        "homeName": "美国",
+        "awayName": "澳大利亚",
+        "xg": {
+          "home": "1.575",
+          "away": "0.965"
+        },
+        "bestScore": "1-0",
+        "bestProb": "12.4",
+        "top5": [
+          {
+            "score": "1-0",
+            "prob": "12.4"
+          },
+          {
+            "score": "1-1",
+            "prob": "12.0"
+          },
+          {
+            "score": "2-0",
+            "prob": "9.8"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.4"
+          },
+          {
+            "score": "0-0",
+            "prob": "7.9"
+          }
+        ],
+        "winProb": {
+          "homeWin": "51.6",
+          "draw": "25.3",
+          "awayWin": "23.1"
+        }
+      },
+      {
+        "home": "Q3",
+        "away": "PAR",
+        "homeName": "欧预C胜者",
+        "awayName": "巴拉圭",
+        "xg": {
+          "home": "1.071",
+          "away": "1.216"
+        },
+        "bestScore": "1-1",
+        "bestProb": "13.2",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "13.2"
+          },
+          {
+            "score": "0-1",
+            "prob": "12.4"
+          },
+          {
+            "score": "1-0",
+            "prob": "10.9"
+          },
+          {
+            "score": "0-0",
+            "prob": "10.2"
+          },
+          {
+            "score": "1-2",
+            "prob": "8.0"
+          }
+        ],
+        "winProb": {
+          "homeWin": "32.2",
+          "draw": "28.4",
+          "awayWin": "39.4"
+        }
+      },
+      {
+        "home": "Q3",
+        "away": "USA",
+        "homeName": "欧预C胜者",
+        "awayName": "美国",
+        "xg": {
+          "home": "1.002",
+          "away": "1.415"
+        },
+        "bestScore": "1-1",
+        "bestProb": "12.6",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "12.6"
+          },
+          {
+            "score": "0-1",
+            "prob": "12.6"
+          },
+          {
+            "score": "1-2",
+            "prob": "8.9"
+          },
+          {
+            "score": "0-2",
+            "prob": "8.9"
+          },
+          {
+            "score": "1-0",
+            "prob": "8.9"
+          }
+        ],
+        "winProb": {
+          "homeWin": "26.7",
+          "draw": "26.8",
+          "awayWin": "46.5"
+        }
+      },
+      {
+        "home": "PAR",
+        "away": "AUS",
+        "homeName": "巴拉圭",
+        "awayName": "澳大利亚",
+        "xg": {
+          "home": "1.265",
+          "away": "1.031"
+        },
+        "bestScore": "1-1",
+        "bestProb": "13.1",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "13.1"
+          },
+          {
+            "score": "1-0",
+            "prob": "12.7"
+          },
+          {
+            "score": "0-1",
+            "prob": "10.4"
+          },
+          {
+            "score": "0-0",
+            "prob": "10.1"
+          },
+          {
+            "score": "2-1",
+            "prob": "8.3"
+          }
+        ],
+        "winProb": {
+          "homeWin": "41.7",
+          "draw": "28.1",
+          "awayWin": "30.2"
+        }
+      }
+    ],
+    "standings": [
+      {
+        "code": "USA",
+        "name": "美国",
+        "firstPct": "48.6",
+        "secondPct": "23.8",
+        "advancePct": "72.4",
+        "avgPoints": "5.1"
+      },
+      {
+        "code": "PAR",
+        "name": "巴拉圭",
+        "firstPct": "27.9",
+        "secondPct": "28.1",
+        "advancePct": "56.0",
+        "avgPoints": "4.1"
+      },
+      {
+        "code": "AUS",
+        "name": "澳大利亚",
+        "firstPct": "14.2",
+        "secondPct": "21.1",
+        "advancePct": "35.4",
+        "avgPoints": "3.2"
+      },
+      {
+        "code": "Q3",
+        "name": "欧预C胜者",
+        "firstPct": "9.2",
+        "secondPct": "15.2",
+        "advancePct": "24.4",
+        "avgPoints": "2.3"
+      },
+      {
+        "code": "TUR",
+        "name": "土耳其",
+        "firstPct": "0.1",
+        "secondPct": "11.8",
+        "advancePct": "11.9",
+        "avgPoints": "1.7"
+      }
+    ]
+  },
+  "E": {
+    "matches": [
+      {
+        "home": "GER",
+        "away": "CUW",
+        "homeName": "德国",
+        "awayName": "库拉索",
+        "xg": {
+          "home": "2.990",
+          "away": "0.497"
+        },
+        "bestScore": "2-0",
+        "bestProb": "13.7",
+        "top5": [
+          {
+            "score": "2-0",
+            "prob": "13.7"
+          },
+          {
+            "score": "3-0",
+            "prob": "13.6"
+          },
+          {
+            "score": "4-0",
+            "prob": "10.2"
+          },
+          {
+            "score": "1-0",
+            "prob": "9.1"
+          },
+          {
+            "score": "2-1",
+            "prob": "6.8"
+          }
+        ],
+        "winProb": {
+          "homeWin": "86.3",
+          "draw": "9.6",
+          "awayWin": "3.7"
+        }
+      },
+      {
+        "home": "CIV",
+        "away": "ECU",
+        "homeName": "科特迪瓦",
+        "awayName": "厄瓜多尔",
+        "xg": {
+          "home": "1.150",
+          "away": "1.190"
+        },
+        "bestScore": "1-1",
+        "bestProb": "13.2",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "13.2"
+          },
+          {
+            "score": "0-1",
+            "prob": "11.5"
+          },
+          {
+            "score": "1-0",
+            "prob": "11.1"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.6"
+          },
+          {
+            "score": "1-2",
+            "prob": "7.8"
+          }
+        ],
+        "winProb": {
+          "homeWin": "35.0",
+          "draw": "28.1",
+          "awayWin": "36.9"
+        }
+      },
+      {
+        "home": "ECU",
+        "away": "GER",
+        "homeName": "厄瓜多尔",
+        "awayName": "德国",
+        "xg": {
+          "home": "0.932",
+          "away": "1.447"
+        },
+        "bestScore": "0-1",
+        "bestProb": "13.4",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "13.4"
+          },
+          {
+            "score": "1-1",
+            "prob": "12.5"
+          },
+          {
+            "score": "0-2",
+            "prob": "9.7"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.3"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.0"
+          }
+        ],
+        "winProb": {
+          "homeWin": "24.3",
+          "draw": "26.7",
+          "awayWin": "49.0"
+        }
+      },
+      {
+        "home": "Q6",
+        "away": "CIV",
+        "homeName": "洲际附加2",
+        "awayName": "科特迪瓦",
+        "xg": {
+          "home": "0.991",
+          "away": "1.485"
+        },
+        "bestScore": "0-1",
+        "bestProb": "12.5",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "12.5"
+          },
+          {
+            "score": "1-1",
+            "prob": "12.4"
+          },
+          {
+            "score": "0-2",
+            "prob": "9.3"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.2"
+          },
+          {
+            "score": "0-0",
+            "prob": "8.4"
+          }
+        ],
+        "winProb": {
+          "homeWin": "25.2",
+          "draw": "26.1",
+          "awayWin": "48.6"
+        }
+      },
+      {
+        "home": "GER",
+        "away": "CIV",
+        "homeName": "德国",
+        "awayName": "科特迪瓦",
+        "xg": {
+          "home": "1.547",
+          "away": "0.964"
+        },
+        "bestScore": "1-0",
+        "bestProb": "12.6",
+        "top5": [
+          {
+            "score": "1-0",
+            "prob": "12.6"
+          },
+          {
+            "score": "1-1",
+            "prob": "12.1"
+          },
+          {
+            "score": "2-0",
+            "prob": "9.7"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.4"
+          },
+          {
+            "score": "0-0",
+            "prob": "8.1"
+          }
+        ],
+        "winProb": {
+          "homeWin": "50.9",
+          "draw": "25.6",
+          "awayWin": "23.5"
+        }
+      },
+      {
+        "home": "ECU",
+        "away": "Q6",
+        "homeName": "厄瓜多尔",
+        "awayName": "洲际附加2",
+        "xg": {
+          "home": "1.438",
+          "away": "0.927"
+        },
+        "bestScore": "1-0",
+        "bestProb": "13.5",
+        "top5": [
+          {
+            "score": "1-0",
+            "prob": "13.5"
+          },
+          {
+            "score": "1-1",
+            "prob": "12.5"
+          },
+          {
+            "score": "2-0",
+            "prob": "9.7"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.4"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.0"
+          }
+        ],
+        "winProb": {
+          "homeWin": "48.9",
+          "draw": "26.8",
+          "awayWin": "24.3"
+        }
+      }
+    ],
+    "standings": [
+      {
+        "code": "GER",
+        "name": "德国",
+        "firstPct": "62.0",
+        "secondPct": "25.1",
+        "advancePct": "87.2",
+        "avgPoints": "6.2"
+      },
+      {
+        "code": "CIV",
+        "name": "科特迪瓦",
+        "firstPct": "17.6",
+        "secondPct": "30.4",
+        "advancePct": "48.0",
+        "avgPoints": "4.0"
+      },
+      {
+        "code": "ECU",
+        "name": "厄瓜多尔",
+        "firstPct": "18.0",
+        "secondPct": "29.8",
+        "advancePct": "47.7",
+        "avgPoints": "4.1"
+      },
+      {
+        "code": "Q6",
+        "name": "洲际附加2",
+        "firstPct": "2.4",
+        "secondPct": "14.2",
+        "advancePct": "16.7",
+        "avgPoints": "2.0"
+      },
+      {
+        "code": "CUW",
+        "name": "库拉索",
+        "firstPct": "0.0",
+        "secondPct": "0.5",
+        "advancePct": "0.5",
+        "avgPoints": "0.2"
+      }
+    ]
+  },
+  "F": {
+    "matches": [
+      {
+        "home": "NED",
+        "away": "JPN",
+        "homeName": "荷兰",
+        "awayName": "日本",
+        "xg": {
+          "home": "1.457",
+          "away": "0.990"
+        },
+        "bestScore": "1-0",
+        "bestProb": "12.6",
+        "top5": [
+          {
+            "score": "1-0",
+            "prob": "12.6"
+          },
+          {
+            "score": "1-1",
+            "prob": "12.5"
+          },
+          {
+            "score": "2-0",
+            "prob": "9.2"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.1"
+          },
+          {
+            "score": "0-0",
+            "prob": "8.7"
+          }
+        ],
+        "winProb": {
+          "homeWin": "47.9",
+          "draw": "26.4",
+          "awayWin": "25.7"
+        }
+      },
+      {
+        "home": "SWE",
+        "away": "TUN",
+        "homeName": "瑞典",
+        "awayName": "突尼斯",
+        "xg": {
+          "home": "1.278",
+          "away": "0.965"
+        },
+        "bestScore": "1-0",
+        "bestProb": "13.6",
+        "top5": [
+          {
+            "score": "1-0",
+            "prob": "13.6"
+          },
+          {
+            "score": "1-1",
+            "prob": "13.1"
+          },
+          {
+            "score": "0-0",
+            "prob": "10.6"
+          },
+          {
+            "score": "0-1",
+            "prob": "10.2"
+          },
+          {
+            "score": "2-0",
+            "prob": "8.7"
+          }
+        ],
+        "winProb": {
+          "homeWin": "43.6",
+          "draw": "28.3",
+          "awayWin": "28.0"
+        }
+      },
+      {
+        "home": "JPN",
+        "away": "SWE",
+        "homeName": "日本",
+        "awayName": "瑞典",
+        "xg": {
+          "home": "1.150",
+          "away": "1.150"
+        },
+        "bestScore": "1-1",
+        "bestProb": "13.3",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "13.3"
+          },
+          {
+            "score": "1-0",
+            "prob": "11.5"
+          },
+          {
+            "score": "0-1",
+            "prob": "11.5"
+          },
+          {
+            "score": "0-0",
+            "prob": "10.0"
+          },
+          {
+            "score": "2-1",
+            "prob": "7.6"
+          }
+        ],
+        "winProb": {
+          "homeWin": "35.8",
+          "draw": "28.4",
+          "awayWin": "35.8"
+        }
+      },
+      {
+        "home": "Q2",
+        "away": "TUN",
+        "homeName": "欧预B胜者",
+        "awayName": "突尼斯",
+        "xg": {
+          "home": "1.150",
+          "away": "1.150"
+        },
+        "bestScore": "1-1",
+        "bestProb": "13.3",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "13.3"
+          },
+          {
+            "score": "0-1",
+            "prob": "11.5"
+          },
+          {
+            "score": "1-0",
+            "prob": "11.5"
+          },
+          {
+            "score": "0-0",
+            "prob": "10.0"
+          },
+          {
+            "score": "1-2",
+            "prob": "7.6"
+          }
+        ],
+        "winProb": {
+          "homeWin": "35.8",
+          "draw": "28.4",
+          "awayWin": "35.8"
+        }
+      },
+      {
+        "home": "TUN",
+        "away": "NED",
+        "homeName": "突尼斯",
+        "awayName": "荷兰",
+        "xg": {
+          "home": "0.831",
+          "away": "1.619"
+        },
+        "bestScore": "0-1",
+        "bestProb": "14.0",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "14.0"
+          },
+          {
+            "score": "1-1",
+            "prob": "11.6"
+          },
+          {
+            "score": "0-2",
+            "prob": "11.3"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.4"
+          },
+          {
+            "score": "0-0",
+            "prob": "8.6"
+          }
+        ],
+        "winProb": {
+          "homeWin": "19.2",
+          "draw": "24.8",
+          "awayWin": "56.0"
+        }
+      },
+      {
+        "home": "JPN",
+        "away": "Q2",
+        "homeName": "日本",
+        "awayName": "欧预B胜者",
+        "xg": {
+          "home": "1.371",
+          "away": "1.035"
+        },
+        "bestScore": "1-1",
+        "bestProb": "12.8",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "12.8"
+          },
+          {
+            "score": "1-0",
+            "prob": "12.4"
+          },
+          {
+            "score": "0-1",
+            "prob": "9.3"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.0"
+          },
+          {
+            "score": "2-1",
+            "prob": "8.8"
+          }
+        ],
+        "winProb": {
+          "homeWin": "44.5",
+          "draw": "27.1",
+          "awayWin": "28.3"
+        }
+      }
+    ],
+    "standings": [
+      {
+        "code": "NED",
+        "name": "荷兰",
+        "firstPct": "31.6",
+        "secondPct": "23.1",
+        "advancePct": "54.7",
+        "avgPoints": "3.7"
+      },
+      {
+        "code": "JPN",
+        "name": "日本",
+        "firstPct": "28.5",
+        "secondPct": "21.1",
+        "advancePct": "49.6",
+        "avgPoints": "4.0"
+      },
+      {
+        "code": "SWE",
+        "name": "瑞典",
+        "firstPct": "15.0",
+        "secondPct": "21.9",
+        "advancePct": "36.9",
+        "avgPoints": "3.0"
+      },
+      {
+        "code": "TUN",
+        "name": "突尼斯",
+        "firstPct": "16.2",
+        "secondPct": "19.0",
+        "advancePct": "35.2",
+        "avgPoints": "3.3"
+      },
+      {
+        "code": "Q2",
+        "name": "欧预B胜者",
+        "firstPct": "8.6",
+        "secondPct": "15.0",
+        "advancePct": "23.6",
+        "avgPoints": "2.4"
+      }
+    ]
+  },
+  "G": {
+    "matches": [
+      {
+        "home": "ESP",
+        "away": "CPV",
+        "homeName": "西班牙",
+        "awayName": "佛得角",
+        "xg": {
+          "home": "2.482",
+          "away": "0.619"
+        },
+        "bestScore": "2-0",
+        "bestProb": "13.9",
+        "top5": [
+          {
+            "score": "2-0",
+            "prob": "13.9"
+          },
+          {
+            "score": "3-0",
+            "prob": "11.5"
+          },
+          {
+            "score": "1-0",
+            "prob": "11.2"
+          },
+          {
+            "score": "2-1",
+            "prob": "8.6"
+          },
+          {
+            "score": "4-0",
+            "prob": "7.1"
+          }
+        ],
+        "winProb": {
+          "homeWin": "78.1",
+          "draw": "14.6",
+          "awayWin": "7.3"
+        }
+      },
+      {
+        "home": "BEL",
+        "away": "EGY",
+        "homeName": "比利时",
+        "awayName": "埃及",
+        "xg": {
+          "home": "1.428",
+          "away": "1.015"
+        },
+        "bestScore": "1-1",
+        "bestProb": "12.6",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "12.6"
+          },
+          {
+            "score": "1-0",
+            "prob": "12.4"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.0"
+          },
+          {
+            "score": "2-0",
+            "prob": "8.9"
+          },
+          {
+            "score": "0-1",
+            "prob": "8.8"
+          }
+        ],
+        "winProb": {
+          "homeWin": "46.5",
+          "draw": "26.7",
+          "awayWin": "26.8"
+        }
+      },
+      {
+        "home": "ESP",
+        "away": "BEL",
+        "homeName": "西班牙",
+        "awayName": "比利时",
+        "xg": {
+          "home": "1.387",
+          "away": "1.062"
+        },
+        "bestScore": "1-1",
+        "bestProb": "12.7",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "12.7"
+          },
+          {
+            "score": "1-0",
+            "prob": "12.0"
+          },
+          {
+            "score": "0-1",
+            "prob": "9.2"
+          },
+          {
+            "score": "2-1",
+            "prob": "8.8"
+          },
+          {
+            "score": "0-0",
+            "prob": "8.6"
+          }
+        ],
+        "winProb": {
+          "homeWin": "44.3",
+          "draw": "26.9",
+          "awayWin": "28.8"
+        }
+      },
+      {
+        "home": "CPV",
+        "away": "EGY",
+        "homeName": "佛得角",
+        "awayName": "埃及",
+        "xg": {
+          "home": "0.833",
+          "away": "1.816"
+        },
+        "bestScore": "0-1",
+        "bestProb": "12.8",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "12.8"
+          },
+          {
+            "score": "0-2",
+            "prob": "11.7"
+          },
+          {
+            "score": "1-1",
+            "prob": "10.7"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.7"
+          },
+          {
+            "score": "0-0",
+            "prob": "7.1"
+          }
+        ],
+        "winProb": {
+          "homeWin": "16.8",
+          "draw": "22.6",
+          "awayWin": "60.6"
+        }
+      },
+      {
+        "home": "EGY",
+        "away": "ESP",
+        "homeName": "埃及",
+        "awayName": "西班牙",
+        "xg": {
+          "home": "0.885",
+          "away": "1.626"
+        },
+        "bestScore": "0-1",
+        "bestProb": "13.2",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "13.2"
+          },
+          {
+            "score": "1-1",
+            "prob": "11.7"
+          },
+          {
+            "score": "0-2",
+            "prob": "10.7"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.5"
+          },
+          {
+            "score": "0-0",
+            "prob": "8.1"
+          }
+        ],
+        "winProb": {
+          "homeWin": "20.4",
+          "draw": "24.7",
+          "awayWin": "54.8"
+        }
+      },
+      {
+        "home": "CPV",
+        "away": "BEL",
+        "homeName": "佛得角",
+        "awayName": "比利时",
+        "xg": {
+          "home": "0.710",
+          "away": "2.179"
+        },
+        "bestScore": "0-2",
+        "bestProb": "13.2",
+        "top5": [
+          {
+            "score": "0-2",
+            "prob": "13.2"
+          },
+          {
+            "score": "0-1",
+            "prob": "12.1"
+          },
+          {
+            "score": "0-3",
+            "prob": "9.6"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.4"
+          },
+          {
+            "score": "1-1",
+            "prob": "8.6"
+          }
+        ],
+        "winProb": {
+          "homeWin": "10.8",
+          "draw": "18.1",
+          "awayWin": "71.1"
+        }
+      }
+    ],
+    "standings": [
+      {
+        "code": "ESP",
+        "name": "西班牙",
+        "firstPct": "52.5",
+        "secondPct": "29.1",
+        "advancePct": "81.7",
+        "avgPoints": "5.9"
+      },
+      {
+        "code": "BEL",
+        "name": "比利时",
+        "firstPct": "31.2",
+        "secondPct": "36.8",
+        "advancePct": "68.0",
+        "avgPoints": "5.1"
+      },
+      {
+        "code": "EGY",
+        "name": "埃及",
+        "firstPct": "14.3",
+        "secondPct": "26.9",
+        "advancePct": "41.2",
+        "avgPoints": "4.0"
+      },
+      {
+        "code": "CPV",
+        "name": "佛得角",
+        "firstPct": "2.0",
+        "secondPct": "7.1",
+        "advancePct": "9.1",
+        "avgPoints": "1.6"
+      }
+    ]
+  },
+  "H": {
+    "matches": [
+      {
+        "home": "KSA",
+        "away": "URU",
+        "homeName": "沙特",
+        "awayName": "乌拉圭",
+        "xg": {
+          "home": "0.767",
+          "away": "1.750"
+        },
+        "bestScore": "0-1",
+        "bestProb": "14.1",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "14.1"
+          },
+          {
+            "score": "0-2",
+            "prob": "12.4"
+          },
+          {
+            "score": "1-1",
+            "prob": "10.8"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.5"
+          },
+          {
+            "score": "0-0",
+            "prob": "8.1"
+          }
+        ],
+        "winProb": {
+          "homeWin": "16.0",
+          "draw": "23.1",
+          "awayWin": "60.8"
+        }
+      },
+      {
+        "home": "NZL",
+        "away": "POR",
+        "homeName": "新西兰",
+        "awayName": "葡萄牙",
+        "xg": {
+          "home": "0.715",
+          "away": "2.039"
+        },
+        "bestScore": "0-2",
+        "bestProb": "13.2",
+        "top5": [
+          {
+            "score": "0-2",
+            "prob": "13.2"
+          },
+          {
+            "score": "0-1",
+            "prob": "13.0"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.5"
+          },
+          {
+            "score": "1-1",
+            "prob": "9.3"
+          },
+          {
+            "score": "0-3",
+            "prob": "9.0"
+          }
+        ],
+        "winProb": {
+          "homeWin": "12.0",
+          "draw": "19.6",
+          "awayWin": "68.3"
+        }
+      },
+      {
+        "home": "URU",
+        "away": "CPV",
+        "homeName": "乌拉圭",
+        "awayName": "佛得角",
+        "xg": {
+          "home": "2.118",
+          "away": "0.671"
+        },
+        "bestScore": "2-0",
+        "bestProb": "13.8",
+        "top5": [
+          {
+            "score": "2-0",
+            "prob": "13.8"
+          },
+          {
+            "score": "1-0",
+            "prob": "13.0"
+          },
+          {
+            "score": "3-0",
+            "prob": "9.7"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.3"
+          },
+          {
+            "score": "1-1",
+            "prob": "8.7"
+          }
+        ],
+        "winProb": {
+          "homeWin": "70.9",
+          "draw": "18.5",
+          "awayWin": "10.5"
+        }
+      },
+      {
+        "home": "POR",
+        "away": "NZL",
+        "homeName": "葡萄牙",
+        "awayName": "新西兰",
+        "xg": {
+          "home": "2.039",
+          "away": "0.715"
+        },
+        "bestScore": "2-0",
+        "bestProb": "13.2",
+        "top5": [
+          {
+            "score": "2-0",
+            "prob": "13.2"
+          },
+          {
+            "score": "1-0",
+            "prob": "13.0"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.5"
+          },
+          {
+            "score": "1-1",
+            "prob": "9.3"
+          },
+          {
+            "score": "3-0",
+            "prob": "9.0"
+          }
+        ],
+        "winProb": {
+          "homeWin": "68.3",
+          "draw": "19.6",
+          "awayWin": "12.0"
+        }
+      },
+      {
+        "home": "NZL",
+        "away": "URU",
+        "homeName": "新西兰",
+        "awayName": "乌拉圭",
+        "xg": {
+          "home": "0.735",
+          "away": "1.830"
+        },
+        "bestScore": "0-1",
+        "bestProb": "14.1",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "14.1"
+          },
+          {
+            "score": "0-2",
+            "prob": "12.9"
+          },
+          {
+            "score": "1-1",
+            "prob": "10.3"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.5"
+          },
+          {
+            "score": "0-3",
+            "prob": "7.9"
+          }
+        ],
+        "winProb": {
+          "homeWin": "14.4",
+          "draw": "22.1",
+          "awayWin": "63.5"
+        }
+      },
+      {
+        "home": "KSA",
+        "away": "POR",
+        "homeName": "沙特",
+        "awayName": "葡萄牙",
+        "xg": {
+          "home": "0.746",
+          "away": "1.950"
+        },
+        "bestScore": "0-1",
+        "bestProb": "13.2",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "13.2"
+          },
+          {
+            "score": "0-2",
+            "prob": "12.8"
+          },
+          {
+            "score": "1-1",
+            "prob": "9.8"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.6"
+          },
+          {
+            "score": "0-3",
+            "prob": "8.3"
+          }
+        ],
+        "winProb": {
+          "homeWin": "13.5",
+          "draw": "20.8",
+          "awayWin": "65.7"
+        }
+      }
+    ],
+    "standings": [
+      {
+        "code": "URU",
+        "name": "乌拉圭",
+        "firstPct": "45.6",
+        "secondPct": "46.3",
+        "advancePct": "91.9",
+        "avgPoints": "6.5"
+      },
+      {
+        "code": "POR",
+        "name": "葡萄牙",
+        "firstPct": "50.2",
+        "secondPct": "40.8",
+        "advancePct": "91.0",
+        "avgPoints": "6.7"
+      },
+      {
+        "code": "NZL",
+        "name": "新西兰",
+        "firstPct": "2.7",
+        "secondPct": "7.1",
+        "advancePct": "9.8",
+        "avgPoints": "1.8"
+      },
+      {
+        "code": "KSA",
+        "name": "沙特",
+        "firstPct": "1.5",
+        "secondPct": "5.7",
+        "advancePct": "7.2",
+        "avgPoints": "1.3"
+      }
+    ]
+  },
+  "I": {
+    "matches": [
+      {
+        "home": "FRA",
+        "away": "SEN",
+        "homeName": "法国",
+        "awayName": "塞内加尔",
+        "xg": {
+          "home": "1.558",
+          "away": "0.920"
+        },
+        "bestScore": "1-0",
+        "bestProb": "13.1",
+        "top5": [
+          {
+            "score": "1-0",
+            "prob": "13.1"
+          },
+          {
+            "score": "1-1",
+            "prob": "12.0"
+          },
+          {
+            "score": "2-0",
+            "prob": "10.2"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.4"
+          },
+          {
+            "score": "0-0",
+            "prob": "8.4"
+          }
+        ],
+        "winProb": {
+          "homeWin": "52.3",
+          "draw": "25.5",
+          "awayWin": "22.3"
+        }
+      },
+      {
+        "home": "IRQ",
+        "away": "NOR",
+        "homeName": "伊拉克",
+        "awayName": "挪威",
+        "xg": {
+          "home": "0.835",
+          "away": "1.807"
+        },
+        "bestScore": "0-1",
+        "bestProb": "12.9",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "12.9"
+          },
+          {
+            "score": "0-2",
+            "prob": "11.6"
+          },
+          {
+            "score": "1-1",
+            "prob": "10.7"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.7"
+          },
+          {
+            "score": "0-0",
+            "prob": "7.1"
+          }
+        ],
+        "winProb": {
+          "homeWin": "16.9",
+          "draw": "22.7",
+          "awayWin": "60.4"
+        }
+      },
+      {
+        "home": "FRA",
+        "away": "IRQ",
+        "homeName": "法国",
+        "awayName": "伊拉克",
+        "xg": {
+          "home": "2.300",
+          "away": "0.647"
+        },
+        "bestScore": "2-0",
+        "bestProb": "13.9",
+        "top5": [
+          {
+            "score": "2-0",
+            "prob": "13.9"
+          },
+          {
+            "score": "1-0",
+            "prob": "12.1"
+          },
+          {
+            "score": "3-0",
+            "prob": "10.6"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.0"
+          },
+          {
+            "score": "1-1",
+            "prob": "7.8"
+          }
+        ],
+        "winProb": {
+          "homeWin": "74.7",
+          "draw": "16.5",
+          "awayWin": "8.8"
+        }
+      },
+      {
+        "home": "NOR",
+        "away": "SEN",
+        "homeName": "挪威",
+        "awayName": "塞内加尔",
+        "xg": {
+          "home": "1.224",
+          "away": "1.187"
+        },
+        "bestScore": "1-1",
+        "bestProb": "13.0",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "13.0"
+          },
+          {
+            "score": "1-0",
+            "prob": "11.0"
+          },
+          {
+            "score": "0-1",
+            "prob": "10.6"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.0"
+          },
+          {
+            "score": "2-1",
+            "prob": "8.0"
+          }
+        ],
+        "winProb": {
+          "homeWin": "37.1",
+          "draw": "27.6",
+          "awayWin": "35.3"
+        }
+      },
+      {
+        "home": "SEN",
+        "away": "IRQ",
+        "homeName": "塞内加尔",
+        "awayName": "伊拉克",
+        "xg": {
+          "home": "1.752",
+          "away": "0.835"
+        },
+        "bestScore": "1-0",
+        "bestProb": "13.2",
+        "top5": [
+          {
+            "score": "1-0",
+            "prob": "13.2"
+          },
+          {
+            "score": "2-0",
+            "prob": "11.6"
+          },
+          {
+            "score": "1-1",
+            "prob": "11.0"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.6"
+          },
+          {
+            "score": "0-0",
+            "prob": "7.5"
+          }
+        ],
+        "winProb": {
+          "homeWin": "59.1",
+          "draw": "23.3",
+          "awayWin": "17.6"
+        }
+      },
+      {
+        "home": "NOR",
+        "away": "FRA",
+        "homeName": "挪威",
+        "awayName": "法国",
+        "xg": {
+          "home": "0.949",
+          "away": "1.558"
+        },
+        "bestScore": "0-1",
+        "bestProb": "12.7",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "12.7"
+          },
+          {
+            "score": "1-1",
+            "prob": "12.1"
+          },
+          {
+            "score": "0-2",
+            "prob": "9.9"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.4"
+          },
+          {
+            "score": "0-0",
+            "prob": "8.2"
+          }
+        ],
+        "winProb": {
+          "homeWin": "23.0",
+          "draw": "25.5",
+          "awayWin": "51.5"
+        }
+      }
+    ],
+    "standings": [
+      {
+        "code": "FRA",
+        "name": "法国",
+        "firstPct": "56.0",
+        "secondPct": "25.9",
+        "advancePct": "82.0",
+        "avgPoints": "6.0"
+      },
+      {
+        "code": "NOR",
+        "name": "挪威",
+        "firstPct": "21.7",
+        "secondPct": "32.3",
+        "advancePct": "54.0",
+        "avgPoints": "4.4"
+      },
+      {
+        "code": "SEN",
+        "name": "塞内加尔",
+        "firstPct": "19.6",
+        "secondPct": "32.0",
+        "advancePct": "51.6",
+        "avgPoints": "4.2"
+      },
+      {
+        "code": "IRQ",
+        "name": "伊拉克",
+        "firstPct": "2.7",
+        "secondPct": "9.8",
+        "advancePct": "12.5",
+        "avgPoints": "1.9"
+      },
+      {
+        "code": "Q5",
+        "name": "洲际附加1",
+        "firstPct": "0.0",
+        "secondPct": "0.0",
+        "advancePct": "0.0",
+        "avgPoints": "0.0"
+      }
+    ]
+  },
+  "J": {
+    "matches": [
+      {
+        "home": "ARG",
+        "away": "ALG",
+        "homeName": "阿根廷",
+        "awayName": "阿尔及利亚",
+        "xg": {
+          "home": "1.626",
+          "away": "0.885"
+        },
+        "bestScore": "1-0",
+        "bestProb": "13.2",
+        "top5": [
+          {
+            "score": "1-0",
+            "prob": "13.2"
+          },
+          {
+            "score": "1-1",
+            "prob": "11.7"
+          },
+          {
+            "score": "2-0",
+            "prob": "10.7"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.5"
+          },
+          {
+            "score": "0-0",
+            "prob": "8.1"
+          }
+        ],
+        "winProb": {
+          "homeWin": "54.8",
+          "draw": "24.7",
+          "awayWin": "20.4"
+        }
+      },
+      {
+        "home": "JOR",
+        "away": "AUT",
+        "homeName": "约旦",
+        "awayName": "奥地利",
+        "xg": {
+          "home": "0.843",
+          "away": "1.698"
+        },
+        "bestScore": "0-1",
+        "bestProb": "13.4",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "13.4"
+          },
+          {
+            "score": "0-2",
+            "prob": "11.4"
+          },
+          {
+            "score": "1-1",
+            "prob": "11.3"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.6"
+          },
+          {
+            "score": "0-0",
+            "prob": "7.9"
+          }
+        ],
+        "winProb": {
+          "homeWin": "18.5",
+          "draw": "23.9",
+          "awayWin": "57.6"
+        }
+      },
+      {
+        "home": "ARG",
+        "away": "JOR",
+        "homeName": "阿根廷",
+        "awayName": "约旦",
+        "xg": {
+          "home": "2.245",
+          "away": "0.649"
+        },
+        "bestScore": "2-0",
+        "bestProb": "14.0",
+        "top5": [
+          {
+            "score": "2-0",
+            "prob": "14.0"
+          },
+          {
+            "score": "1-0",
+            "prob": "12.4"
+          },
+          {
+            "score": "3-0",
+            "prob": "10.4"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.1"
+          },
+          {
+            "score": "1-1",
+            "prob": "8.1"
+          }
+        ],
+        "winProb": {
+          "homeWin": "73.7",
+          "draw": "17.1",
+          "awayWin": "9.2"
+        }
+      },
+      {
+        "home": "AUT",
+        "away": "ALG",
+        "homeName": "奥地利",
+        "awayName": "阿尔及利亚",
+        "xg": {
+          "home": "1.229",
+          "away": "1.150"
+        },
+        "bestScore": "1-1",
+        "bestProb": "13.1",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "13.1"
+          },
+          {
+            "score": "1-0",
+            "prob": "11.4"
+          },
+          {
+            "score": "0-1",
+            "prob": "10.7"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.3"
+          },
+          {
+            "score": "2-1",
+            "prob": "8.0"
+          }
+        ],
+        "winProb": {
+          "homeWin": "38.0",
+          "draw": "27.8",
+          "awayWin": "34.2"
+        }
+      },
+      {
+        "home": "ALG",
+        "away": "JOR",
+        "homeName": "阿尔及利亚",
+        "awayName": "约旦",
+        "xg": {
+          "home": "1.643",
+          "away": "0.872"
+        },
+        "bestScore": "1-0",
+        "bestProb": "13.3",
+        "top5": [
+          {
+            "score": "1-0",
+            "prob": "13.3"
+          },
+          {
+            "score": "1-1",
+            "prob": "11.6"
+          },
+          {
+            "score": "2-0",
+            "prob": "10.9"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.5"
+          },
+          {
+            "score": "0-0",
+            "prob": "8.1"
+          }
+        ],
+        "winProb": {
+          "homeWin": "55.6",
+          "draw": "24.5",
+          "awayWin": "19.9"
+        }
+      },
+      {
+        "home": "AUT",
+        "away": "ARG",
+        "homeName": "奥地利",
+        "awayName": "阿根廷",
+        "xg": {
+          "home": "0.914",
+          "away": "1.572"
+        },
+        "bestScore": "0-1",
+        "bestProb": "13.1",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "13.1"
+          },
+          {
+            "score": "1-1",
+            "prob": "12.0"
+          },
+          {
+            "score": "0-2",
+            "prob": "10.3"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.4"
+          },
+          {
+            "score": "0-0",
+            "prob": "8.3"
+          }
+        ],
+        "winProb": {
+          "homeWin": "21.9",
+          "draw": "25.3",
+          "awayWin": "52.7"
+        }
+      }
+    ],
+    "standings": [
+      {
+        "code": "ARG",
+        "name": "阿根廷",
+        "firstPct": "57.1",
+        "secondPct": "27.2",
+        "advancePct": "84.2",
+        "avgPoints": "6.1"
+      },
+      {
+        "code": "ALG",
+        "name": "阿尔及利亚",
+        "firstPct": "19.3",
+        "secondPct": "31.5",
+        "advancePct": "50.8",
+        "avgPoints": "4.1"
+      },
+      {
+        "code": "AUT",
+        "name": "奥地利",
+        "firstPct": "20.4",
+        "secondPct": "30.1",
+        "advancePct": "50.5",
+        "avgPoints": "4.3"
+      },
+      {
+        "code": "JOR",
+        "name": "约旦",
+        "firstPct": "3.2",
+        "secondPct": "11.2",
+        "advancePct": "14.4",
+        "avgPoints": "2.0"
+      }
+    ]
+  },
+  "K": {
+    "matches": [
+      {
+        "home": "COL",
+        "away": "COD",
+        "homeName": "哥伦比亚",
+        "awayName": "刚果(金)",
+        "xg": {
+          "home": "1.830",
+          "away": "0.778"
+        },
+        "bestScore": "1-0",
+        "bestProb": "13.5",
+        "top5": [
+          {
+            "score": "1-0",
+            "prob": "13.5"
+          },
+          {
+            "score": "2-0",
+            "prob": "12.3"
+          },
+          {
+            "score": "1-1",
+            "prob": "10.5"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.6"
+          },
+          {
+            "score": "3-0",
+            "prob": "7.5"
+          }
+        ],
+        "winProb": {
+          "homeWin": "62.4",
+          "draw": "22.2",
+          "awayWin": "15.4"
+        }
+      },
+      {
+        "home": "UZB",
+        "away": "IRN",
+        "homeName": "乌兹别克",
+        "awayName": "伊朗",
+        "xg": {
+          "home": "1.022",
+          "away": "1.300"
+        },
+        "bestScore": "1-1",
+        "bestProb": "13.0",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "13.0"
+          },
+          {
+            "score": "0-1",
+            "prob": "12.7"
+          },
+          {
+            "score": "1-0",
+            "prob": "10.0"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.8"
+          },
+          {
+            "score": "1-2",
+            "prob": "8.5"
+          }
+        ],
+        "winProb": {
+          "homeWin": "29.3",
+          "draw": "27.9",
+          "awayWin": "42.9"
+        }
+      },
+      {
+        "home": "COL",
+        "away": "UZB",
+        "homeName": "哥伦比亚",
+        "awayName": "乌兹别克",
+        "xg": {
+          "home": "1.750",
+          "away": "0.812"
+        },
+        "bestScore": "1-0",
+        "bestProb": "13.5",
+        "top5": [
+          {
+            "score": "1-0",
+            "prob": "13.5"
+          },
+          {
+            "score": "2-0",
+            "prob": "11.8"
+          },
+          {
+            "score": "1-1",
+            "prob": "11.0"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.6"
+          },
+          {
+            "score": "0-0",
+            "prob": "7.7"
+          }
+        ],
+        "winProb": {
+          "homeWin": "59.7",
+          "draw": "23.2",
+          "awayWin": "17.1"
+        }
+      },
+      {
+        "home": "IRN",
+        "away": "COD",
+        "homeName": "伊朗",
+        "awayName": "刚果(金)",
+        "xg": {
+          "home": "1.359",
+          "away": "0.980"
+        },
+        "bestScore": "1-0",
+        "bestProb": "13.1",
+        "top5": [
+          {
+            "score": "1-0",
+            "prob": "13.1"
+          },
+          {
+            "score": "1-1",
+            "prob": "12.8"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.6"
+          },
+          {
+            "score": "0-1",
+            "prob": "9.4"
+          },
+          {
+            "score": "2-0",
+            "prob": "8.9"
+          }
+        ],
+        "winProb": {
+          "homeWin": "45.5",
+          "draw": "27.4",
+          "awayWin": "27.0"
+        }
+      },
+      {
+        "home": "COD",
+        "away": "UZB",
+        "homeName": "刚果(金)",
+        "awayName": "乌兹别克",
+        "xg": {
+          "home": "1.150",
+          "away": "1.255"
+        },
+        "bestScore": "1-1",
+        "bestProb": "13.0",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "13.0"
+          },
+          {
+            "score": "0-1",
+            "prob": "11.3"
+          },
+          {
+            "score": "1-0",
+            "prob": "10.4"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.0"
+          },
+          {
+            "score": "1-2",
+            "prob": "8.2"
+          }
+        ],
+        "winProb": {
+          "homeWin": "33.7",
+          "draw": "27.6",
+          "awayWin": "38.7"
+        }
+      },
+      {
+        "home": "IRN",
+        "away": "COL",
+        "homeName": "伊朗",
+        "awayName": "哥伦比亚",
+        "xg": {
+          "home": "0.879",
+          "away": "1.491"
+        },
+        "bestScore": "0-1",
+        "bestProb": "13.9",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "13.9"
+          },
+          {
+            "score": "1-1",
+            "prob": "12.3"
+          },
+          {
+            "score": "0-2",
+            "prob": "10.4"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.3"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.1"
+          }
+        ],
+        "winProb": {
+          "homeWin": "22.2",
+          "draw": "26.3",
+          "awayWin": "51.5"
+        }
+      }
+    ],
+    "standings": [
+      {
+        "code": "COL",
+        "name": "哥伦比亚",
+        "firstPct": "56.5",
+        "secondPct": "25.4",
+        "advancePct": "81.8",
+        "avgPoints": "5.9"
+      },
+      {
+        "code": "IRN",
+        "name": "伊朗",
+        "firstPct": "21.1",
+        "secondPct": "29.8",
+        "advancePct": "50.9",
+        "avgPoints": "4.2"
+      },
+      {
+        "code": "UZB",
+        "name": "乌兹别克",
+        "firstPct": "12.4",
+        "secondPct": "23.3",
+        "advancePct": "35.7",
+        "avgPoints": "3.3"
+      },
+      {
+        "code": "COD",
+        "name": "刚果(金)",
+        "firstPct": "10.1",
+        "secondPct": "21.5",
+        "advancePct": "31.6",
+        "avgPoints": "3.0"
+      }
+    ]
+  },
+  "L": {
+    "matches": [
+      {
+        "home": "ENG",
+        "away": "CRO",
+        "homeName": "英格兰",
+        "awayName": "克罗地亚",
+        "xg": {
+          "home": "1.314",
+          "away": "1.029"
+        },
+        "bestScore": "1-1",
+        "bestProb": "13.0",
+        "top5": [
+          {
+            "score": "1-1",
+            "prob": "13.0"
+          },
+          {
+            "score": "1-0",
+            "prob": "12.6"
+          },
+          {
+            "score": "0-1",
+            "prob": "9.9"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.6"
+          },
+          {
+            "score": "2-1",
+            "prob": "8.5"
+          }
+        ],
+        "winProb": {
+          "homeWin": "43.1",
+          "draw": "27.7",
+          "awayWin": "29.2"
+        }
+      },
+      {
+        "home": "GHA",
+        "away": "PAN",
+        "homeName": "加纳",
+        "awayName": "巴拿马",
+        "xg": {
+          "home": "1.533",
+          "away": "0.937"
+        },
+        "bestScore": "1-0",
+        "bestProb": "13.0",
+        "top5": [
+          {
+            "score": "1-0",
+            "prob": "13.0"
+          },
+          {
+            "score": "1-1",
+            "prob": "12.1"
+          },
+          {
+            "score": "2-0",
+            "prob": "9.9"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.3"
+          },
+          {
+            "score": "0-0",
+            "prob": "8.5"
+          }
+        ],
+        "winProb": {
+          "homeWin": "51.2",
+          "draw": "25.7",
+          "awayWin": "23.1"
+        }
+      },
+      {
+        "home": "ENG",
+        "away": "GHA",
+        "homeName": "英格兰",
+        "awayName": "加纳",
+        "xg": {
+          "home": "1.704",
+          "away": "0.847"
+        },
+        "bestScore": "1-0",
+        "bestProb": "13.3",
+        "top5": [
+          {
+            "score": "1-0",
+            "prob": "13.3"
+          },
+          {
+            "score": "2-0",
+            "prob": "11.3"
+          },
+          {
+            "score": "1-1",
+            "prob": "11.3"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.6"
+          },
+          {
+            "score": "0-0",
+            "prob": "7.8"
+          }
+        ],
+        "winProb": {
+          "homeWin": "57.7",
+          "draw": "23.8",
+          "awayWin": "18.5"
+        }
+      },
+      {
+        "home": "PAN",
+        "away": "CRO",
+        "homeName": "巴拿马",
+        "awayName": "克罗地亚",
+        "xg": {
+          "home": "0.723",
+          "away": "1.862"
+        },
+        "bestScore": "0-1",
+        "bestProb": "14.0",
+        "top5": [
+          {
+            "score": "0-1",
+            "prob": "14.0"
+          },
+          {
+            "score": "0-2",
+            "prob": "13.1"
+          },
+          {
+            "score": "1-1",
+            "prob": "10.1"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.4"
+          },
+          {
+            "score": "0-3",
+            "prob": "8.1"
+          }
+        ],
+        "winProb": {
+          "homeWin": "13.8",
+          "draw": "21.7",
+          "awayWin": "64.5"
+        }
+      },
+      {
+        "home": "CRO",
+        "away": "GHA",
+        "homeName": "克罗地亚",
+        "awayName": "加纳",
+        "xg": {
+          "home": "1.448",
+          "away": "0.920"
+        },
+        "bestScore": "1-0",
+        "bestProb": "13.6",
+        "top5": [
+          {
+            "score": "1-0",
+            "prob": "13.6"
+          },
+          {
+            "score": "1-1",
+            "prob": "12.5"
+          },
+          {
+            "score": "2-0",
+            "prob": "9.8"
+          },
+          {
+            "score": "0-0",
+            "prob": "9.4"
+          },
+          {
+            "score": "2-1",
+            "prob": "9.0"
+          }
+        ],
+        "winProb": {
+          "homeWin": "49.4",
+          "draw": "26.7",
+          "awayWin": "23.9"
+        }
+      },
+      {
+        "home": "PAN",
+        "away": "ENG",
+        "homeName": "巴拿马",
+        "awayName": "英格兰",
+        "xg": {
+          "home": "0.666",
+          "away": "2.190"
+        },
+        "bestScore": "0-2",
+        "bestProb": "13.8",
+        "top5": [
+          {
+            "score": "0-2",
+            "prob": "13.8"
+          },
+          {
+            "score": "0-1",
+            "prob": "12.6"
+          },
+          {
+            "score": "0-3",
+            "prob": "10.1"
+          },
+          {
+            "score": "1-2",
+            "prob": "9.2"
+          },
+          {
+            "score": "1-1",
+            "prob": "8.4"
+          }
+        ],
+        "winProb": {
+          "homeWin": "9.9",
+          "draw": "17.7",
+          "awayWin": "72.3"
+        }
+      }
+    ],
+    "standings": [
+      {
+        "code": "ENG",
+        "name": "英格兰",
+        "firstPct": "53.2",
+        "secondPct": "28.8",
+        "advancePct": "82.0",
+        "avgPoints": "5.9"
+      },
+      {
+        "code": "CRO",
+        "name": "克罗地亚",
+        "firstPct": "31.6",
+        "secondPct": "38.3",
+        "advancePct": "69.9",
+        "avgPoints": "5.1"
+      },
+      {
+        "code": "GHA",
+        "name": "加纳",
+        "firstPct": "12.0",
+        "secondPct": "23.4",
+        "advancePct": "35.5",
+        "avgPoints": "3.6"
+      },
+      {
+        "code": "PAN",
+        "name": "巴拿马",
+        "firstPct": "3.2",
+        "secondPct": "9.4",
+        "advancePct": "12.6",
+        "avgPoints": "2.0"
+      }
+    ]
+  }
+}

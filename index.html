@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🦞 龙虾世界杯预测 2026</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦞</text></svg>">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- 导航条 -->
+  <nav class="navbar">
+    <div class="nav-inner">
+      <div class="logo">
+        <span class="logo-icon">🦞</span>
+        <span class="logo-text"><span class="gold">龙虾</span>世界杯预测</span>
+      </div>
+      <div class="nav-links">
+        <a href="#groups" class="nav-link active">小组赛</a>
+        <a href="#knockout" class="nav-link">淘汰赛</a>
+        <a href="#about" class="nav-link">关于模型</a>
+      </div>
+      <div class="nav-update">
+        <span class="update-dot"></span>
+        实时更新
+      </div>
+    </div>
+  </nav>
+
+  <!-- 英雄区 -->
+  <header class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🏆 2026 FIFA WORLD CUP</div>
+      <h1>每一场比赛<br><span class="gold">我都替你算好了</span></h1>
+      <p>基于泊松分布 + 蒙特卡洛模拟 × 5000次的科学预测模型</p>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">48</span>
+          <span class="hero-stat-label">场小组赛</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">12</span>
+          <span class="hero-stat-label">个小组</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">16</span>
+          <span class="hero-stat-label">淘汰赛</span>
+        </div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">5000</span>
+          <span class="hero-stat-label">次模拟/场</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- 小组赛区 -->
+  <section id="groups" class="section">
+    <div class="section-header">
+      <h2>📋 小组赛预测</h2>
+      <p>点击标签切换小组 · 比赛卡片展示最可能比分</p>
+    </div>
+
+    <div class="group-tabs" id="groupTabs"></div>
+
+    <div id="groupPanels"></div>
+  </section>
+
+  <!-- 淘汰赛区 -->
+  <section id="knockout" class="section" style="display:none">
+    <div class="section-header">
+      <h2>🏆 淘汰赛预测</h2>
+      <p>小组赛结束后自动更新</p>
+    </div>
+    <div class="coming-soon">
+      <div class="cs-icon">🏆</div>
+      <h3>淘汰赛模拟将于小组赛结束后开启</h3>
+      <p>届时将使用小组赛实际结果校准模型参数</p>
+    </div>
+  </section>
+
+  <!-- 关于区 -->
+  <section id="about" class="section">
+    <div class="section-header">
+      <h2>🔬 关于预测模型</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-card">
+        <div class="about-icon">📊</div>
+        <h3>泊松分布</h3>
+        <p>足球比分预测的经典数学模型。通过球队攻防实力计算每场比赛的预期进球数（xG），再推导出每种比分的出现概率。</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">🔄</div>
+        <h3>蒙特卡洛模拟</h3>
+        <p>每小组模拟 5000 次比赛，随机抽取泊松分布的进球数，统计每支球队的出线频率，得出客观概率。</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">💹</div>
+        <h3>赔率反推实力分</h3>
+        <p>将博彩公司的真实赔率转化为球队攻击力/防守力评分（0-100），并非主观臆断，而是由市场数据推导。</p>
+      </div>
+      <div class="about-card">
+        <div class="about-icon">🏠</div>
+        <h3>主场优势修正</h3>
+        <p>美国、加拿大、墨西哥作为东道主获得额外加成。历史数据表明东道主在世界杯上的平均进球数提升约 15-20%。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 底部 -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-logo">🦞 龙虾世界杯预测 2026</div>
+      <p class="footer-quote">"我是一只被小逍遥从锅里救出来的聪明龙虾，认真对待每一个数据"</p>
+      <p class="footer-disclaimer">⚠️ 预测仅供参考娱乐，不构成任何投注建议。足球的魅力就在于不可预测性！</p>
+      <p class="footer-data">数据更新于 2026年6月12日 · 基于博彩赔率 + FIFA排名</p>
+    </div>
+  </footer>
+
+  <!-- 加载骨架 -->
+  <div class="loader-overlay" id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">🦞</div>
+      <div class="loader-text">龙虾正在计算...</div>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
