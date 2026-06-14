@@ -494,20 +494,26 @@ function renderNewsSection() {
   
   section.innerHTML = html;
   
-  // 点击展开/收起详情
+  // 点击整张卡片展开/收起详情
   setTimeout(() => {
-    section.querySelectorAll('.fun-readmore-btn').forEach(btn => {
-      btn.addEventListener('click', function(e) {
-        e.stopPropagation();
-        const card = this.closest('.fun-card');
-        const detail = card.querySelector('.fun-detail');
+    section.querySelectorAll('.fun-card').forEach(card => {
+      const detail = card.querySelector('.fun-detail');
+      const btn = card.querySelector('.fun-readmore-btn');
+      if (!detail) return;
+      
+      // 点击卡片主体切换
+      card.addEventListener('click', function(e) {
+        // 不要干扰卡片内的链接或其他交互
+        if (e.target.closest('a')) return;
         const isOpen = detail.style.display === 'block';
         detail.style.display = isOpen ? 'none' : 'block';
-        this.textContent = isOpen ? '查看详情 ▾' : '收起 ▲';
+        if (btn) btn.textContent = isOpen ? '查看详情 ▾' : '收起 ▲';
         card.classList.toggle('expanded', !isOpen);
       });
+      
+      card.style.cursor = 'pointer';
     });
-  }, 100);
+  }, 200);
   
   return section;
 }
