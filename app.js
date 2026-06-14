@@ -527,7 +527,7 @@ async function init() {
     '<p>请这只努力算数据的龙虾喝一杯</p>' +
     '</div>' +
     '<div class="donate-box-body">' +
-    '<div class="qr-wrap-empty"><span>🦞</span></div>' +
+    '<div class="qr-wrap"><img src="donate.jpg" alt="微信收款码"></div>' +
     '<div class="qr-label">扫码打赏 · 随缘支持</div>' +
     '</div>' +
     '<div class="donate-box-footer">' +
