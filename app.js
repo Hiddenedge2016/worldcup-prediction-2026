@@ -522,9 +522,9 @@ async function init() {
     '</div>' +
     '<div class="donate-box" style="max-width:900px;margin:0 auto 24px">' +
     '<p>🦞 如果觉得预测还不错，</p>' +
-    '<div class="qr-placeholder">🦞</div>' +
+    '<img src="donate.png" style="width:120px;height:120px;border-radius:8px;object-fit:cover">' +
     '<p>请 <span class="name">龙虾</span> 喝瓶啤酒🍺</p>' +
-    '<p style="font-size:11px;opacity:0.6">（替换成你的收款码）</p></div>';
+    '<p style="font-size:11px;opacity:0.6"></p></div>';
   
   const monWrap = document.createElement('div');
   monWrap.innerHTML = monHtml;
