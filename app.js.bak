@@ -155,14 +155,14 @@ function renderMatchCard(m) {
       <div class="winbar-away" style="width:${aw}%"></div>
     </div>
     <div class="match-probs">
-      <span>🏠 <strong style="color:var(--teal)">${m.winProb.homeWin}%</strong></span>
-      <span>🤝 <strong style="color:var(--muted)">${m.winProb.draw}%</strong></span>
-      <span>✈️ <strong style="color:var(--coral)">${m.winProb.awayWin}%</strong></span>
+      <span>🏠 <strong style="color:var(--green)">${m.winProb.homeWin}%</strong></span>
+      <span>🤝 <strong style="color:var(--gray)">${m.winProb.draw}%</strong></span>
+      <span>✈️ <strong style="color:var(--red)">${m.winProb.awayWin}%</strong></span>
       <span>🎯 预测最可能 ${m.bestScore} (${m.bestProb}%)</span>
     </div>
     <div class="top5-scores">
-      <span style="color:var(--lobster);font-weight:600">Top 5</span>
-      ${m.top5.map(s => `<span class="score-item">${s.score} <span style="color:var(--muted)">${s.prob}%</span></span>`).join('')}
+      <span style="color:var(--gold);font-weight:600">Top 5</span>
+      ${m.top5.map(s => `<span class="score-item">${s.score} <span style="color:var(--text-muted)">${s.prob}%</span></span>`).join('')}
     </div>
   `;
   return card;
@@ -208,12 +208,12 @@ function renderRealStandings(groupCode) {
         </div>
       </td>
       <td style="text-align:center">${s.gp}</td>
-      <td style="text-align:center;color:var(--teal)">${s.w}</td>
-      <td style="text-align:center;color:var(--muted)">${s.d}</td>
-      <td style="text-align:center;color:var(--coral)">${s.l}</td>
+      <td style="text-align:center;color:var(--green)">${s.w}</td>
+      <td style="text-align:center;color:var(--text-muted)">${s.d}</td>
+      <td style="text-align:center;color:var(--red)">${s.l}</td>
       <td style="text-align:center">${s.gf}:${s.ga}</td>
-      <td style="text-align:center;font-weight:${s.gd > 0 ? '700' : '400'};color:${s.gd > 0 ? 'var(--teal)' : s.gd < 0 ? 'var(--coral)' : 'var(--muted)'}">${s.gd > 0 ? '+' : ''}${s.gd}</td>
-      <td style="text-align:right;font-weight:700;color:var(--lobster)">${s.pts}</td>
+      <td style="text-align:center;font-weight:${s.gd > 0 ? '700' : '400'};color:${s.gd > 0 ? 'var(--green)' : s.gd < 0 ? 'var(--red)' : 'var(--text-muted)'}">${s.gd > 0 ? '+' : ''}${s.gd}</td>
+      <td style="text-align:right;font-weight:700;color:var(--gold)">${s.pts}</td>
     </tr>`;
   });
   
@@ -222,7 +222,7 @@ function renderRealStandings(groupCode) {
   // 晋级线标识
   if (isComplete) {
     html += `<div class="legend-row">
-      <span class="legend-dot" style="background:var(--teal-dim);border:1px solid var(--teal)"></span> 前二出线区
+      <span class="legend-dot" style="background:var(--green-bg);border:1px solid var(--green)"></span> 前二出线区
     </div>`;
   }
   
@@ -248,7 +248,7 @@ function renderStandings(standings, groupCode) {
   standings.forEach((s, i) => {
     const f = FLAGS[s.code] || '🏳️';
     const pct = parseFloat(s.advancePct);
-    const barColor = pct > 70 ? 'var(--teal)' : pct > 40 ? 'var(--lobster)' : 'var(--muted)';
+    const barColor = pct > 70 ? 'var(--green)' : pct > 40 ? 'var(--gold)' : 'var(--text-muted)';
     
     // 是否和实际积分榜吻合
     let alignIcon = '';
@@ -322,7 +322,7 @@ function renderAccuracyStats() {
     });
   });
   
-  if (total === 0) return `<div class="section"><div class="section-header"><h2>📊 预测准度</h2></div><p style="color:var(--muted);font-size:14px">暂无已完赛比赛，数据积累中...</p></div>`;
+  if (total === 0) return `<div class="section"><div class="section-header"><h2>📊 预测准度</h2></div><p style="color:var(--text-muted);font-size:14px">暂无已完赛比赛，数据积累中...</p></div>`;
   
   const accExact = (exact / total * 100).toFixed(0);
   const accOutcome = ((exact + outcome) / total * 100).toFixed(0);
@@ -383,7 +383,7 @@ function renderPanels() {
     panel.dataset.group = g;
     
     const desc = document.createElement('p');
-    desc.style.cssText = 'color:var(--muted);font-size:13px;margin-bottom:16px';
+    desc.style.cssText = 'color:var(--text-muted);font-size:13px;margin-bottom:16px';
     desc.textContent = GROUP_NAMES[g] || g + '组';
     panel.appendChild(desc);
     
@@ -503,7 +503,7 @@ async function init() {
     document.getElementById('loader').innerHTML = `
       <div style="text-align:center">
         <div style="font-size:48px">😿</div>
-        <p style="color:var(--muted);margin-top:16px">加载预测数据失败了，请稍后再试</p>
+        <p style="color:var(--text-secondary);margin-top:16px">加载预测数据失败了，请稍后再试</p>
       </div>`;
     return;
   }
