@@ -804,21 +804,20 @@ body {
   padding: 0 24px 24px;
   text-align: center;
 }
-.donate-box-body .qr-wrap {
-  display: inline-block;
-  position: relative;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid var(--border);
+.donate-box-body .qr-wrap-empty {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 88px;
+  height: 88px;
+  background: var(--lobster-dim);
+  border: 1px solid var(--border-active);
   border-radius: var(--radius);
-  padding: 8px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
-.donate-box-body .qr-wrap img {
-  width: 110px;
-  height: 110px;
-  border-radius: 6px;
-  object-fit: cover;
-  display: block;
+.donate-box-body .qr-wrap-empty span {
+  font-size: 40px;
+  filter: grayscale(0.3);
 }
 .donate-box-body .qr-label {
   font-size: 11px;
