@@ -469,8 +469,9 @@ function renderNewsSection() {
     };
     if (tagColors[item.tag]) tagClass += ' ' + tagColors[item.tag];
     
+    const hasDetail = !!item.detail;
     html += `
-      <div class="fun-card">
+      <div class="fun-card" data-id="${item.id}">
         <div class="fun-emoji">${item.emoji || '⚽'}</div>
         <div class="fun-body">
           <div class="fun-meta">
@@ -479,6 +480,7 @@ function renderNewsSection() {
           </div>
           <h3 class="fun-title">${item.title}</h3>
           <p class="fun-summary">${item.summary}</p>
+          ${hasDetail ? `<div class="fun-detail" style="display:none"><p>${item.detail}</p></div><div class="fun-readmore"><span class="fun-readmore-btn">查看详情 ▾</span></div>` : ''}
         </div>
       </div>`;
   });
@@ -491,6 +493,22 @@ function renderNewsSection() {
   </section>`;
   
   section.innerHTML = html;
+  
+  // 点击展开/收起详情
+  setTimeout(() => {
+    section.querySelectorAll('.fun-readmore-btn').forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        const card = this.closest('.fun-card');
+        const detail = card.querySelector('.fun-detail');
+        const isOpen = detail.style.display === 'block';
+        detail.style.display = isOpen ? 'none' : 'block';
+        this.textContent = isOpen ? '查看详情 ▾' : '收起 ▲';
+        card.classList.toggle('expanded', !isOpen);
+      });
+    });
+  }, 100);
+  
   return section;
 }
 
