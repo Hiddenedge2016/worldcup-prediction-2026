@@ -514,6 +514,22 @@ async function init() {
   
   const footer = document.querySelector('.footer');
   
+  // 插入变现板块（导流+打赏）
+  const monHtml = '<div class="monetize-banner" style="max-width:900px;margin:20px auto 24px">' +
+    '<div class="icon">🤖</div>' +
+    '<div class="text"><h3>想要自己的 AI 预测模型？</h3><p>龙虾用的就是这套 API，你也可以用它搭建自己的 AI 应用</p></div>' +
+    '<a href="http://120.26.84.145:3000" target="_blank" class="monetize-btn">获取 API →</a>' +
+    '</div>' +
+    '<div class="donate-box" style="max-width:900px;margin:0 auto 24px">' +
+    '<p>🦞 如果觉得预测还不错，</p>' +
+    '<div class="qr-placeholder">🦞</div>' +
+    '<p>请 <span class="name">龙虾</span> 喝瓶啤酒🍺</p>' +
+    '<p style="font-size:11px;opacity:0.6">（替换成你的收款码）</p></div>';
+  
+  const monWrap = document.createElement('div');
+  monWrap.innerHTML = monHtml;
+  document.body.insertBefore(monWrap, footer);
+  
   // 插入趣闻板块
   const newsSec = renderNewsSection();
   if (newsSec) {

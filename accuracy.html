@@ -171,6 +171,16 @@
       }
       html += '</div>';
 
+      html += '<div class="monetize-banner" style="max-width:900px;margin:24px auto 0">' +
+        '<div class="icon">🤖</div>' +
+        '<div class="text"><h3>想要自己的 AI 预测模型？</h3><p>龙虾用的就是这套 API，你也可以用它搭建自己的 AI 应用</p></div>' +
+        '<a href="http://120.26.84.145:3000" target="_blank" class="monetize-btn">获取 API →</a>' +
+        '</div>' +
+        '<div class="donate-box" style="max-width:900px;margin:12px auto 0">' +
+        '<p>🦞 如果觉得预测还不错，请 <span class="name">龙虾</span> 喝瓶啤酒🍺</p>' +
+        '<div class="qr-placeholder">🦞</div>' +
+        '<p style="font-size:11px;opacity:0.6">（替换成收款码）</p></div>';
+
       document.getElementById('app').innerHTML = html;
     }
 

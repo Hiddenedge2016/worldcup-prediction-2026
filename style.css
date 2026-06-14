@@ -807,3 +807,56 @@ body {
   border-radius: 8px;
   border: 1px dashed var(--border);
 }
+
+/* ===== 变现区块 ===== */
+.monetize-banner {
+  background: linear-gradient(135deg, var(--gold-dim), var(--bg-card));
+  border: 1px solid var(--gold-dim);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px 0 24px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.monetize-banner .icon { font-size: 36px; }
+.monetize-banner .text { flex: 1; min-width: 200px; }
+.monetize-banner .text h3 { font-size: 14px; font-weight: 700; color: var(--gold); margin-bottom: 4px; }
+.monetize-banner .text p { font-size: 12px; color: var(--text-muted); line-height: 1.5; }
+.monetize-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--gold);
+  color: #000;
+  font-weight: 700;
+  font-size: 13px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+.monetize-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+.donate-box {
+  margin: 24px 0;
+  padding: 16px;
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px dashed var(--border);
+  text-align: center;
+}
+.donate-box .qr-placeholder {
+  display: inline-block;
+  width: 120px;
+  height: 120px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border: 2px dashed var(--border);
+  margin: 8px auto;
+  line-height: 120px;
+  font-size: 48px;
+}
+.donate-box p { font-size: 12px; color: var(--text-muted); margin-top: 8px; }
+.donate-box p .name { color: var(--gold); font-weight: 600; }
