@@ -520,11 +520,19 @@ async function init() {
     '<div class="text"><h3>想要自己的 AI 预测模型？</h3><p>龙虾用的就是这套 API，你也可以用它搭建自己的 AI 应用</p></div>' +
     '<a href="http://120.26.84.145:3000" target="_blank" class="monetize-btn">获取 API →</a>' +
     '</div>' +
-    '<div class="donate-box" style="max-width:900px;margin:0 auto 24px">' +
-    '<p>🦞 如果觉得预测还不错，</p>' +
-    '<img src="donate.png" style="width:120px;height:120px;border-radius:8px;object-fit:cover">' +
-    '<p>请 <span class="name">龙虾</span> 喝瓶啤酒🍺</p>' +
-    '<p style="font-size:11px;opacity:0.6"></p></div>';
+    '<div class="donate-box">' +
+    '<div class="donate-box-header">' +
+    '<span class="lobster">🦞</span>' +
+    '<h3>觉得预测还不错？</h3>' +
+    '<p>请这只努力算数据的龙虾喝一杯</p>' +
+    '</div>' +
+    '<div class="donate-box-body">' +
+    '<div class="qr-wrap"><img src="donate.png"></div>' +
+    '<div class="qr-label">扫码打赏 · 随缘支持</div>' +
+    '</div>' +
+    '<div class="donate-box-footer">' +
+    '<p>请 <span class="name">龙虾</span> 喝瓶<span class="beer">🍺</span></p>' +
+    '</div></div>';
   
   const monWrap = document.createElement('div');
   monWrap.innerHTML = monHtml;
