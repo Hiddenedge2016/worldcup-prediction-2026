@@ -14,10 +14,67 @@
     .article-tag { display: inline-block; padding: 2px 10px; border-radius: 4px; font-size: 11px; font-weight: 700; }
     .article-date { font-size: 13px; color: var(--text-muted); }
     .article-title { font-size: 26px; font-weight: 700; line-height: 1.35; margin-bottom: 24px; }
-    .article-hero { background: var(--bg-card); border-radius: 16px; height: 220px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); position: relative; overflow: hidden; }
-    .article-hero-bg { position: absolute; inset: 0; opacity: 0.04; background: radial-gradient(circle at 50% 50%, var(--gold) 0%, transparent 70%); }
-    .article-hero-emoji { position: relative; z-index: 1; font-size: 80px; filter: drop-shadow(0 8px 24px rgba(240, 192, 64, 0.3)); animation: float 3s ease-in-out infinite; }
-    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+    
+    /* ===== 场景图 ===== */
+    .scene-card {
+      background: var(--bg-card);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .scene-bg {
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      position: relative;
+      overflow: hidden;
+    }
+    .scene-bg .big-emoji {
+      font-size: 56px;
+      filter: drop-shadow(0 4px 12px rgba(0,0,0,0.3));
+      animation: sceneFloat 3s ease-in-out infinite;
+    }
+    .scene-bg .small-emoji {
+      font-size: 32px;
+      opacity: 0.6;
+    }
+    .scene-bg .tiny-emoji {
+      font-size: 22px;
+      opacity: 0.4;
+      position: absolute;
+    }
+    @keyframes sceneFloat {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    .scene-particles {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+    .scene-particles span {
+      position: absolute;
+      font-size: 18px;
+      opacity: 0.25;
+      animation: particleDrift 6s ease-in-out infinite;
+    }
+    @keyframes particleDrift {
+      0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.2; }
+      50% { transform: translateY(-20px) rotate(20deg); opacity: 0.4; }
+    }
+    .scene-caption {
+      padding: 10px 16px;
+      font-size: 12px;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      letter-spacing: 0.5px;
+    }
+    
     .article-body { font-size: 15px; line-height: 1.85; color: var(--text-secondary); }
     .article-body p { margin-bottom: 16px; }
     .article-divider { border: none; border-top: 1px solid var(--border); margin: 32px 0; }
@@ -28,7 +85,7 @@
     .article-related a:hover { background: var(--bg-card-hover); color: var(--gold); }
     .article-related a .emoji { font-size: 20px; }
     .article-footer-text { text-align: center; font-size: 12px; color: var(--text-muted); margin-top: 40px; padding: 20px; }
-    @media (max-width: 640px) { .article-title { font-size: 20px; } .article-hero { height: 160px; } .article-hero-emoji { font-size: 60px; } }
+    @media (max-width: 640px) { .article-title { font-size: 20px; } .scene-bg { height: 150px; } .scene-bg .big-emoji { font-size: 40px; } }
   </style>
 </head>
 <body>
@@ -47,12 +104,33 @@
   <div id="app"></div>
   <script>
   (function(){
-    var D = {"headlines": [{"id": 1, "date": "2026-06-14", "title": "AI直播世界杯骗了142万人！大象冲进球场都有人信", "summary": "YouTube出现AI生成的2026世界杯开幕直播，画面逼真、口型同步，吸引超142万人次观看。甚至有观众声称看到了大象冲进球场。", "detail": "YouTube上出现了一个名为「BREAKING: 2026 FIFA World Cup Opening Ceremony Live」的AI生成直播频道，画面中解说员的嘴型与声音完美同步，背景是逼真的体育场AI渲染。直播持续了8小时，吸引了142万实时观看。令人震惊的是，评论区有数百人认真讨论「大象冲进球场」的画面——其实那也是AI生成的。YouTube事后下架了该频道，但网友称「AI时代我们已经分不清什么是真的了」。", "tag": "离谱", "emoji": "🤖"}, {"id": 2, "date": "2026-06-14", "title": "加拿大开幕式翻车：大力神杯充气球没立起来", "summary": "多伦多开幕式上，大力神杯造型充气球因机械故障未能完全升起，瘪塌塌地倒回去，现场气氛一度尴尬。", "detail": "2026世界杯由美加墨三国联办，开幕式在加拿大多伦多BMO球场举行。开幕式进行到「致敬足球」环节时，一个巨大的大力神杯造型充气球缓缓升起，但升到一半突然泄气，像被戳破的气球一样瘪塌塌地倒在场地上。现场8万名观众先是一阵惊呼，随后爆发出善意的笑声。主持人紧急救场说「看来大力神杯也太激动了」。事后主办方表示是气压泵故障，现已修复。", "tag": "翻车", "emoji": "🎈"}, {"id": 3, "date": "2026-06-14", "title": "揭幕战3张红牌！新规狠到南非被罚下2人", "summary": "墨西哥2-0胜南非的揭幕战中裁判连出3张直接红牌，南非2人被罚下、墨西哥1人被罚下。本届新规「捂嘴直红」落地即发威。", "detail": "墨西哥对阵南非的揭幕战中，新规「捂嘴直红」首次亮相就大显神威。南非中场球员在一次拼抢后抬手捂住对方嘴巴并推搡，VAR介入后主裁判直接出示红牌。7分钟后南非又有一名后卫因恶意铲球吃到第二张红牌，墨西哥也在下半场因肘击被罚下一人。一场比赛3张直接红牌，已经超过2022卡塔尔世界杯整届的红牌总数（2张直接红牌）。球迷戏称「新规是认真的」。", "tag": "狠", "emoji": "🟥"}, {"id": 4, "date": "2026-06-14", "title": "英格兰队装备在美国被偷，只剩一个足球", "summary": "英格兰队抵达堪萨斯城前，运输训练装备的车辆遭盗窃，球鞋、比赛用球、训练器材全被偷走。警方已介入。", "detail": "英格兰队乘坐包机抵达堪萨斯城国际机场后，发现运输装备的货车在停车场被盗。车内有全队42双定制球鞋、50个比赛用球、训练背心、门将手套以及战术投影设备，总价值约30万美元。唯一幸存的足球是因为被凯恩随手拿下来签名，留在了球队大巴上。警方调取监控发现嫌犯是一伙专门盗窃体育装备的惯犯。英格兰队紧急联系了赞助商连夜空运新装备。", "tag": "惨", "emoji": "😱"}, {"id": 5, "date": "2026-06-13", "title": "哈兰德代言王老吉，洗脑广告全网爆火", "summary": "挪威球星哈兰德代言中国凉茶王老吉，改编经典应援曲创造了「哈～哈～哈～哈兰德」魔性旋律，网友笑翻。", "detail": "挪威球星埃尔林·哈兰德成为王老吉最新全球品牌代言人。广告中将王老吉经典广告曲改编成世界杯版本，哈兰德本人亲自出镜演唱「哈～哈～哈～哈兰德」，配合标志性的魔性舞步。该广告在TikTok上三天内播放量破亿。网友调侃：「哈兰德现在有两个身份——世界顶级前锋和中国凉茶代言人。」「这可能是世界杯期间最洗脑的声音。」", "tag": "魔性", "emoji": "😂"}, {"id": 6, "date": "2026-06-13", "title": "法国薄荷绿球衣卖断货，灵感来自自由女神", "summary": "法国队客队球衣首次采用薄荷绿色，设计灵感源于自由女神像。开赛前就被抢购一空，官方网店已缺货。", "detail": "法国队本届世界杯的客场球衣大胆采用了薄荷绿色调，这是法国队历史上首次使用非蓝/白/红色系的主色调设计。设计师表示灵感来自自由女神像的铜绿氧化色，象征法国与美国的历史纽带。球衣发布后48小时内在全球售罄，Adidas官网上的预售队列一度超过5万人。二手平台上原价899元的球衣已经被炒到2500元以上。不少球迷吐槽「好看是好看，但根本买不到」。", "tag": "潮流", "emoji": "👕"}, {"id": 7, "date": "2026-06-13", "title": "日本通灵鹦鹉预测：日本小组赛三连胜", "summary": "日本一只曾多次精准预测体育赛事结果的「通灵鹦鹉」预测日本队将在小组赛三战全胜。拭目以待。", "detail": "日本茨城县的鹦鹉「小樱」再次成为焦点。它曾因连续准确预测了2022年世界杯多场比赛结果而走红。在2026世界杯开赛前，主人再次请小樱预测日本队命运。小樱被放在三面旗帜前：胜、平、负，结果小樱毫不犹豫地三次选择了「胜」。主人表示「小樱的准确率高达80%以上」。不过也有专家指出，鹦鹉预测本质上是概率游戏，日本队在F组面对荷兰、瑞典、突尼斯，三连胜难度极大。", "tag": "玄学", "emoji": "🦜"}, {"id": 8, "date": "2026-06-12", "title": "韩国vs捷克比赛中球员球衣被扯爆", "summary": "韩国对阵捷克的比赛中，韩国球员直接扯爆了捷克前锋的球衣，浅色球衣当场破出大洞，引发场边一片惊呼。", "detail": "韩国队对阵捷克队的小组赛中发生了一幕罕见的场景。捷克前锋在带球突破时被韩国后卫从身后拉扯球衣，由于新版球衣采用了更轻薄的环保面料，整个后背部当场被撕开一个篮球大小的破洞。裁判示意比赛继续——因为球衣没有被完全扯掉。赛后捷克球员举着破球衣找裁判理论，场面又好笑又无奈。赞助商Puma表示将加强球衣面料强度。", "tag": "暴力", "emoji": "💥"}, {"id": 9, "date": "2026-06-12", "title": "梅西第6次出征世界杯，热身上场119秒进球", "summary": "38岁梅西在世界杯热身赛对阵冰岛替补上场仅119秒就罚入点球，宣告回归，刷新个人纪录。", "detail": "38岁的里奥·梅西第6次披上阿根廷国家队战袍出征世界杯，追平了个人参赛纪录。在对阵冰岛的热身赛中，梅西替补登场仅119秒就接应队友传球突入禁区被放倒，亲自主罚点球命中。从上场到进球仅用时119秒，刷新了他个人在世界杯相关赛事中最快进球纪录。赛后梅西表示「身体状态感觉比上届更好」。阿根廷球迷高呼「GOAT还在奔跑」。", "tag": "传奇", "emoji": "🐐"}, {"id": 10, "date": "2026-06-12", "title": "本届世界杯票太贵！连川普都说贵", "summary": "美国队首战门票未售罄，FIFA动态定价机制被批太贵。连川普都公开吐槽票价。韩国vs捷克战看台上出现数千空位。", "detail": "FIFA本届世界杯首次全面启用动态定价机制，热门场次门票价格水涨船高。美国队对阵巴拉圭的首战最高票价被炒到2200美元，即便如此仍有大量余票未售出。前总统川普在社交媒体上发文称「世界杯门票太贵了，这不美国！」韩国对阵捷克的比赛看台上出现了数千个空位，看起来像在打空场比赛。FIFA回应称「将根据实际情况调整定价策略」。球迷组织则呼吁抵制高价票。", "tag": "争议", "emoji": "💸"}, {"id": 11, "date": "2026-06-14", "title": "美国4-1大胜巴拉圭，追平世界杯最大赢球纪录", "summary": "Folarin Balogun梅开二度，东道主美国队4-1狂胜巴拉圭，追平了美国队史世界杯最大赢球比分纪录。", "detail": "东道主美国队在D组首战中表现出色，4-1大胜巴拉圭。富勒姆前锋Folarin Balogun梅开二度，普利西奇和维阿各入一球。4-1的比分追平了美国队史在世界杯上的最大赢球比分纪录（2002年曾3-0胜波兰、2010年曾3-0胜阿尔及利亚，但净胜球均为3球）。美国队自1994年首次主办世界杯以来，再次在本土大胜开了一个好头。现场7万球迷齐声高唱国歌，气氛炸裂。", "tag": "强势", "emoji": "🇺🇸"}, {"id": 12, "date": "2026-06-14", "title": "C罗第6次参加世界杯，葡萄牙公布27人名单", "summary": "40岁的C罗领衔葡萄牙队第6次出征世界杯，与梅西并列成为参赛次数最多的球员。", "detail": "40岁的克里斯蒂亚诺·罗纳尔多再次入选葡萄牙国家队世界杯27人大名单，这将是他的第6届世界杯，与梅西并列成为历史上参赛次数最多的球员。C罗在2006年德国世界杯首次亮相，当时他21岁。如今40岁的他仍然是葡萄牙队的精神领袖。教练马丁内斯表示「C罗的状态非常好，他在沙特联赛依然保持着顶级进球效率」。C罗本人在社交媒体发文：「6次，依然像第一次一样兴奋。」", "tag": "纪录", "emoji": "🇵🇹"}]};
+    var D = {"headlines": [{"id": 1, "date": "2026-06-14", "title": "AI直播世界杯骗了142万人！大象冲进球场都有人信", "summary": "YouTube出现AI生成的2026世界杯开幕直播，画面逼真、口型同步，吸引超142万人次观看。甚至有观众声称看到了大象冲进球场。", "detail": "YouTube上出现了一个名为「BREAKING: 2026 FIFA World Cup Opening Ceremony Live」的AI生成直播频道，画面中解说员的嘴型与声音完美同步，背景是逼真的体育场AI渲染。直播持续了8小时，吸引了142万实时观看。令人震惊的是，评论区有数百人认真讨论「大象冲进球场」的画面——其实那也是AI生成的。YouTube事后下架了该频道，但网友称「AI时代我们已经分不清什么是真的了」。", "tag": "离谱", "emoji": "🤖", "scene": {"bg": "🌐🎭📡", "desc": "AI生成的直播画面", "elements": ["📺", "🤖", "👥", "🎬"], "color": "#a855f7"}}, {"id": 2, "date": "2026-06-14", "title": "加拿大开幕式翻车：大力神杯充气球没立起来", "summary": "多伦多开幕式上，大力神杯造型充气球因机械故障未能完全升起，瘪塌塌地倒回去，现场气氛一度尴尬。", "detail": "2026世界杯由美加墨三国联办，开幕式在加拿大多伦多BMO球场举行。开幕式进行到「致敬足球」环节时，一个巨大的大力神杯造型充气球缓缓升起，但升到一半突然泄气，像被戳破的气球一样瘪塌塌地倒在场地上。现场8万名观众先是一阵惊呼，随后爆发出善意的笑声。主持人紧急救场说「看来大力神杯也太激动了」。事后主办方表示是气压泵故障，现已修复。", "tag": "翻车", "emoji": "🎈", "scene": {"bg": "🎈🏟️😅", "desc": "大力神杯气球泄气", "elements": ["🏆", "🎈", "💨", "😱"], "color": "#f97316"}}, {"id": 3, "date": "2026-06-14", "title": "揭幕战3张红牌！新规狠到南非被罚下2人", "summary": "墨西哥2-0胜南非的揭幕战中裁判连出3张直接红牌，南非2人被罚下、墨西哥1人被罚下。本届新规「捂嘴直红」落地即发威。", "detail": "墨西哥对阵南非的揭幕战中，新规「捂嘴直红」首次亮相就大显神威。南非中场球员在一次拼抢后抬手捂住对方嘴巴并推搡，VAR介入后主裁判直接出示红牌。7分钟后南非又有一名后卫因恶意铲球吃到第二张红牌，墨西哥也在下半场因肘击被罚下一人。一场比赛3张直接红牌，已经超过2022卡塔尔世界杯整届的红牌总数（2张直接红牌）。球迷戏称「新规是认真的」。", "tag": "狠", "emoji": "🟥", "scene": {"bg": "🟥⚽🟥", "desc": "裁判连出三张红牌", "elements": ["🟥", "⚽", "👨‍⚖️", "🔥"], "color": "#ef4444"}}, {"id": 4, "date": "2026-06-14", "title": "英格兰队装备在美国被偷，只剩一个足球", "summary": "英格兰队抵达堪萨斯城前，运输训练装备的车辆遭盗窃，球鞋、比赛用球、训练器材全被偷走。警方已介入。", "detail": "英格兰队乘坐包机抵达堪萨斯城国际机场后，发现运输装备的货车在停车场被盗。车内有全队42双定制球鞋、50个比赛用球、训练背心、门将手套以及战术投影设备，总价值约30万美元。唯一幸存的足球是因为被凯恩随手拿下来签名，留在了球队大巴上。警方调取监控发现嫌犯是一伙专门盗窃体育装备的惯犯。英格兰队紧急联系了赞助商连夜空运新装备。", "tag": "惨", "emoji": "😱", "scene": {"bg": "🚐💼😱", "desc": "装备车被偷", "elements": ["🚐", "💼", "🕵️", "😰"], "color": "#6366f1"}}, {"id": 5, "date": "2026-06-13", "title": "哈兰德代言王老吉，洗脑广告全网爆火", "summary": "挪威球星哈兰德代言中国凉茶王老吉，改编经典应援曲创造了「哈～哈～哈～哈兰德」魔性旋律，网友笑翻。", "detail": "挪威球星埃尔林·哈兰德成为王老吉最新全球品牌代言人。广告中将王老吉经典广告曲改编成世界杯版本，哈兰德本人亲自出镜演唱「哈～哈～哈～哈兰德」，配合标志性的魔性舞步。该广告在TikTok上三天内播放量破亿。网友调侃：「哈兰德现在有两个身份——世界顶级前锋和中国凉茶代言人。」「这可能是世界杯期间最洗脑的声音。」", "tag": "魔性", "emoji": "😂", "scene": {"bg": "🎵🥤😂", "desc": "哈兰德王老吉广告", "elements": ["🎵", "🥤", "🦁", "😂"], "color": "#eab308"}}, {"id": 6, "date": "2026-06-13", "title": "法国薄荷绿球衣卖断货，灵感来自自由女神", "summary": "法国队客队球衣首次采用薄荷绿色，设计灵感源于自由女神像。开赛前就被抢购一空，官方网店已缺货。", "detail": "法国队本届世界杯的客场球衣大胆采用了薄荷绿色调，这是法国队历史上首次使用非蓝/白/红色系的主色调设计。设计师表示灵感来自自由女神像的铜绿氧化色，象征法国与美国的历史纽带。球衣发布后48小时内在全球售罄，Adidas官网上的预售队列一度超过5万人。二手平台上原价899元的球衣已经被炒到2500元以上。不少球迷吐槽「好看是好看，但根本买不到」。", "tag": "潮流", "emoji": "👕", "scene": {"bg": "👕💚🇫🇷", "desc": "薄荷绿球衣售罄", "elements": ["👕", "💚", "🗽", "🔥"], "color": "#06b6d4"}}, {"id": 7, "date": "2026-06-13", "title": "日本通灵鹦鹉预测：日本小组赛三连胜", "summary": "日本一只曾多次精准预测体育赛事结果的「通灵鹦鹉」预测日本队将在小组赛三战全胜。拭目以待。", "detail": "日本茨城县的鹦鹉「小樱」再次成为焦点。它曾因连续准确预测了2022年世界杯多场比赛结果而走红。在2026世界杯开赛前，主人再次请小樱预测日本队命运。小樱被放在三面旗帜前：胜、平、负，结果小樱毫不犹豫地三次选择了「胜」。主人表示「小樱的准确率高达80%以上」。不过也有专家指出，鹦鹉预测本质上是概率游戏，日本队在F组面对荷兰、瑞典、突尼斯，三连胜难度极大。", "tag": "玄学", "emoji": "🦜", "scene": {"bg": "🦜🇯🇵⚽", "desc": "通灵鹦鹉预测", "elements": ["🦜", "🔮", "⚽", "🤔"], "color": "#8b5cf6"}}, {"id": 8, "date": "2026-06-12", "title": "韩国vs捷克比赛中球员球衣被扯爆", "summary": "韩国对阵捷克的比赛中，韩国球员直接扯爆了捷克前锋的球衣，浅色球衣当场破出大洞，引发场边一片惊呼。", "detail": "韩国队对阵捷克队的小组赛中发生了一幕罕见的场景。捷克前锋在带球突破时被韩国后卫从身后拉扯球衣，由于新版球衣采用了更轻薄的环保面料，整个后背部当场被撕开一个篮球大小的破洞。裁判示意比赛继续——因为球衣没有被完全扯掉。赛后捷克球员举着破球衣找裁判理论，场面又好笑又无奈。赞助商Puma表示将加强球衣面料强度。", "tag": "暴力", "emoji": "💥", "scene": {"bg": "👕💥😱", "desc": "球衣被扯爆", "elements": ["👕", "💥", "🏃", "😱"], "color": "#ef4444"}}, {"id": 9, "date": "2026-06-12", "title": "梅西第6次出征世界杯，热身上场119秒进球", "summary": "38岁梅西在世界杯热身赛对阵冰岛替补上场仅119秒就罚入点球，宣告回归，刷新个人纪录。", "detail": "38岁的里奥·梅西第6次披上阿根廷国家队战袍出征世界杯，追平了个人参赛纪录。在对阵冰岛的热身赛中，梅西替补登场仅119秒就接应队友传球突入禁区被放倒，亲自主罚点球命中。从上场到进球仅用时119秒，刷新了他个人在世界杯相关赛事中最快进球纪录。赛后梅西表示「身体状态感觉比上届更好」。阿根廷球迷高呼「GOAT还在奔跑」。", "tag": "传奇", "emoji": "🐐", "scene": {"bg": "🐐🇦🇷🔥", "desc": "梅西119秒进球", "elements": ["🐐", "⚽", "🔥", "👟"], "color": "#f59e0b"}}, {"id": 10, "date": "2026-06-12", "title": "本届世界杯票太贵！连川普都说贵", "summary": "美国队首战门票未售罄，FIFA动态定价机制被批太贵。连川普都公开吐槽票价。韩国vs捷克战看台上出现数千空位。", "detail": "FIFA本届世界杯首次全面启用动态定价机制，热门场次门票价格水涨船高。美国队对阵巴拉圭的首战最高票价被炒到2200美元，即便如此仍有大量余票未售出。前总统川普在社交媒体上发文称「世界杯门票太贵了，这不美国！」韩国对阵捷克的比赛看台上出现了数千个空位，看起来像在打空场比赛。FIFA回应称「将根据实际情况调整定价策略」。球迷组织则呼吁抵制高价票。", "tag": "争议", "emoji": "💸", "scene": {"bg": "💸🎫😤", "desc": "门票太贵", "elements": ["💸", "🎫", "😤", "💰"], "color": "#ff6b6b"}}, {"id": 11, "date": "2026-06-14", "title": "美国4-1大胜巴拉圭，追平世界杯最大赢球纪录", "summary": "Folarin Balogun梅开二度，东道主美国队4-1狂胜巴拉圭，追平了美国队史世界杯最大赢球比分纪录。", "detail": "东道主美国队在D组首战中表现出色，4-1大胜巴拉圭。富勒姆前锋Folarin Balogun梅开二度，普利西奇和维阿各入一球。4-1的比分追平了美国队史在世界杯上的最大赢球比分纪录（2002年曾3-0胜波兰、2010年曾3-0胜阿尔及利亚，但净胜球均为3球）。美国队自1994年首次主办世界杯以来，再次在本土大胜开了一个好头。现场7万球迷齐声高唱国歌，气氛炸裂。", "tag": "强势", "emoji": "🇺🇸", "scene": {"bg": "🇺🇸⚽🔥", "desc": "美国4-1大胜", "elements": ["🇺🇸", "⚽", "🔥", "🎉"], "color": "#22c55e"}}, {"id": 12, "date": "2026-06-14", "title": "C罗第6次参加世界杯，葡萄牙公布27人名单", "summary": "40岁的C罗领衔葡萄牙队第6次出征世界杯，与梅西并列成为参赛次数最多的球员。", "detail": "40岁的克里斯蒂亚诺·罗纳尔多再次入选葡萄牙国家队世界杯27人大名单，这将是他的第6届世界杯，与梅西并列成为历史上参赛次数最多的球员。C罗在2006年德国世界杯首次亮相，当时他21岁。如今40岁的他仍然是葡萄牙队的精神领袖。教练马丁内斯表示「C罗的状态非常好，他在沙特联赛依然保持着顶级进球效率」。C罗本人在社交媒体发文：「6次，依然像第一次一样兴奋。」", "tag": "纪录", "emoji": "🇵🇹", "scene": {"bg": "🇵🇹🐐🏆", "desc": "C罗第6次参赛", "elements": ["🇵🇹", "🐐", "🏆", "🔥"], "color": "#f59e0b"}}]};
     var C = {'离谱':'#a855f7','翻车':'#f97316','狠':'#ef4444','惨':'#6366f1','魔性':'#eab308','潮流':'#06b6d4','玄学':'#8b5cf6','暴力':'#ef4444','传奇':'#f59e0b','争议':'#ff6b6b','强势':'#22c55e','纪录':'#f59e0b'};
     var TC = {'离谱':'tag-insane','翻车':'tag-wtf','狠':'tag-brutal','惨':'tag-ouch','魔性':'tag-funny','潮流':'tag-cool','玄学':'tag-mystic','暴力':'tag-brutal','传奇':'tag-legacy','争议':'tag-hot','强势':'tag-strong','纪录':'tag-legacy'};
     var p = new URLSearchParams(window.location.search);
     var id = parseInt(p.get('id')) || 0;
     var app = document.getElementById('app');
+
+    function renderScene(scene) {
+      if (!scene) return '<div class="scene-card"><div class="scene-bg" style="font-size:80px">⚽</div></div>';
+      var particles = '';
+      if (scene.elements) {
+        for (var i = 0; i < scene.elements.length; i++) {
+          var t = (i * 15) + 's';
+          var l = (20 + i * 20) + '%';
+          var d = (i * 1.5) + 's';
+          particles += '<span style="left:' + l + ';animation-delay:' + d + '">' + scene.elements[i] + '</span>';
+        }
+      }
+      var bgStyle = 'background:linear-gradient(135deg, ' + (scene.color || '#f0c040') + '15, ' + (scene.color || '#f0c040') + '05)';
+      return '<div class="scene-card">' +
+        '<div class="scene-bg" style="' + bgStyle + '">' +
+        '<div class="scene-particles">' + particles + '</div>' +
+        '<span class="big-emoji">' + (scene.bg || '⚽') + '</span>' +
+        '</div>' +
+        (scene.desc ? '<div class="scene-caption">🎨 ' + scene.desc + '</div>' : '') +
+        '</div>';
+    }
 
     if (id) {
       var item = D.headlines.find(function(h){return h.id===id;});
@@ -72,12 +150,15 @@
       }
       var bh = '';
       for (var i=0;i<ps.length;i++) { var s=i===0?' style="color:var(--text);font-size:16px;font-weight:500"':''; bh += '<p'+s+'>'+ps[i]+'</p>'; }
+      
+      var sceneHtml = renderScene(item.scene);
+      
       app.innerHTML =
         '<div class="article-page">' +
         '<a href="news.html" class="article-back">&larr; 返回趣闻</a>' +
         '<div class="article-meta"><span class="article-tag" style="background:'+tc+'30;color:'+tc+'">'+item.tag+'</span><span class="article-date">'+dl+'</span></div>' +
         '<h1 class="article-title">'+item.title+'</h1>' +
-        '<div class="article-hero"><div class="article-hero-bg"></div><div class="article-hero-emoji">'+(item.emoji||'⚽')+'</div></div>' +
+        sceneHtml +
         '<div class="article-body">'+bh+'</div>' +
         '<hr class="article-divider">' +
         '<div class="article-tags-row"><span class="article-tag" style="background:'+tc+'30;color:'+tc+'">'+item.tag+'</span><span class="article-tag" style="background:var(--bg-secondary);color:var(--text-muted)">⚽ 2026世界杯</span><span class="article-tag" style="background:var(--bg-secondary);color:var(--text-muted)">🦞 龙虾趣闻</span></div>' +
