@@ -469,9 +469,8 @@ function renderNewsSection() {
     };
     if (tagColors[item.tag]) tagClass += ' ' + tagColors[item.tag];
     
-    const hasDetail = !!item.detail;
     html += `
-      <div class="fun-card" data-id="${item.id}">
+      <a href="news.html?id=${item.id}" class="fun-card" data-id="${item.id}">
         <div class="fun-emoji">${item.emoji || '⚽'}</div>
         <div class="fun-body">
           <div class="fun-meta">
@@ -480,9 +479,9 @@ function renderNewsSection() {
           </div>
           <h3 class="fun-title">${item.title}</h3>
           <p class="fun-summary">${item.summary}</p>
-          ${hasDetail ? `<div class="fun-detail" style="display:none"><p>${item.detail}</p></div><div class="fun-readmore"><span class="fun-readmore-btn">查看详情 ▾</span></div>` : ''}
+          <div class="fun-readmore"><span class="fun-readmore-btn">查看详情 →</span></div>
         </div>
-      </div>`;
+      </a>`;
   });
   
   html += `
@@ -493,27 +492,6 @@ function renderNewsSection() {
   </section>`;
   
   section.innerHTML = html;
-  
-  // 点击整张卡片展开/收起详情
-  setTimeout(() => {
-    section.querySelectorAll('.fun-card').forEach(card => {
-      const detail = card.querySelector('.fun-detail');
-      const btn = card.querySelector('.fun-readmore-btn');
-      if (!detail) return;
-      
-      // 点击卡片主体切换
-      card.addEventListener('click', function(e) {
-        // 不要干扰卡片内的链接或其他交互
-        if (e.target.closest('a')) return;
-        const isOpen = detail.style.display === 'block';
-        detail.style.display = isOpen ? 'none' : 'block';
-        if (btn) btn.textContent = isOpen ? '查看详情 ▾' : '收起 ▲';
-        card.classList.toggle('expanded', !isOpen);
-      });
-      
-      card.style.cursor = 'pointer';
-    });
-  }, 200);
   
   return section;
 }
