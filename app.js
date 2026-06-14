@@ -425,16 +425,14 @@ function setupNav() {
       link.classList.add('active');
       
       const target = link.getAttribute('href').substring(1);
-      ['groups', 'knockout', 'accuracy', 'fun', 'about'].forEach(id => {
+      ['groups', 'knockout', 'accuracy', 'about'].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = (id === 'about' ? 'about' : id) === target ? 'block' : 'none';
       });
       
-      // 特殊处理 accuracy 和 fun
+      // 特殊处理 accuracy
       const accSec = document.getElementById('accuracy');
       if (accSec) accSec.style.display = target === 'accuracy' ? 'block' : 'none';
-      const funSec = document.getElementById('fun');
-      if (funSec) funSec.style.display = target === 'fun' ? 'block' : 'none';
     });
   });
 }
@@ -512,12 +510,7 @@ async function init() {
   renderPanels();
   setupNav();
   
-  // 插入趣闻板块到页面
   const footer = document.querySelector('.footer');
-  const newsSec = renderNewsSection();
-  if (newsSec) {
-    document.body.insertBefore(newsSec, footer);
-  }
   
   // 隐藏加载
   setTimeout(() => {
