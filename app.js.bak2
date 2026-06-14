@@ -425,22 +425,36 @@ function setupNav() {
       link.classList.add('active');
       
       const target = link.getAttribute('href').substring(1);
-      ['groups', 'knockout', 'daily', 'comments', 'about'].forEach(id => {
+      ['groups', 'knockout', 'accuracy', 'daily', 'comments', 'about'].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = (id === 'about' ? 'about' : id) === target ? 'block' : 'none';
       });
+      
+      // 特殊处理 accuracy 和 fun
+      const accSec = document.getElementById('accuracy');
+      if (accSec) accSec.style.display = target === 'accuracy' ? 'block' : 'none';
+      const funSec = document.getElementById('fun');
+      if (funSec) funSec.style.display = target === 'fun' ? 'block' : 'none';
     });
   });
 }
 
 // ===== 渲染趣闻板块 =====
 function renderNewsSection() {
-  const container = document.getElementById('funContent');
-  if (!container || !news || !news.headlines || news.headlines.length === 0) return;
+  if (!news || !news.headlines || news.headlines.length === 0) return null;
   
-  const sorted = [...news.headlines].sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 8);
+  const sorted = [...news.headlines].sort((a, b) => new Date(b.date) - new Date(a.date));
   
-  let html = '<div class="fun-grid">';
+  const section = document.createElement('section');
+  section.className = 'section';
+  section.id = 'fun';
+  
+  let html = `
+    <div class="section-header">
+      <h2>🎪 世界杯趣闻</h2>
+      <p>赛场外的花絮、奇葩、冷知识 · 每日更新</p>
+    </div>
+    <div class="fun-grid">`;
   
   sorted.forEach(item => {
     const dateLabel = item.date.replace(/^2026-/, '');
@@ -454,79 +468,31 @@ function renderNewsSection() {
     };
     if (tagColors[item.tag]) tagClass += ' ' + tagColors[item.tag];
     
-    html += '<a href="news.html?id=' + item.id + '" class="fun-card" data-id="' + item.id + '">' +
-      '<div class="fun-emoji">' + (item.emoji || '⚽') + '</div>' +
-      '<div class="fun-body">' +
-      '<div class="fun-meta">' +
-      '<span class="' + tagClass + '">' + item.tag + '</span>' +
-      '<span class="fun-date">' + dateLabel + '</span>' +
-      '</div>' +
-      '<h3 class="fun-title">' + item.title + '</h3>' +
-      '<p class="fun-summary">' + item.summary + '</p>' +
-      '<div class="fun-readmore"><span class="fun-readmore-btn">查看详情 →</span></div>' +
-      '</div></a>';
+    html += `
+      <a href="news.html?id=${item.id}" class="fun-card" data-id="${item.id}">
+        <div class="fun-emoji">${item.emoji || '⚽'}</div>
+        <div class="fun-body">
+          <div class="fun-meta">
+            <span class="${tagClass}">${item.tag}</span>
+            <span class="fun-date">${dateLabel}</span>
+          </div>
+          <h3 class="fun-title">${item.title}</h3>
+          <p class="fun-summary">${item.summary}</p>
+          <div class="fun-readmore"><span class="fun-readmore-btn">查看详情 →</span></div>
+        </div>
+      </a>`;
   });
   
-  html += '</div>';
-  container.innerHTML = html;
-}
-
-// ===== 渲染准度板块 =====
-function renderAccuracySection() {
-  const container = document.getElementById('accuracyContent');
-  if (!container) return;
+  html += `
+    </div>
+    <div class="fun-footer">
+      <span>🦞 趣闻每日更新 · 来源综合各大媒体</span>
+    </div>
+  </section>`;
   
-  if (!results) {
-    container.innerHTML = '<p style="color:var(--muted);font-size:14px">暂无已完赛比赛，数据积累中...</p>';
-    return;
-  }
+  section.innerHTML = html;
   
-  let total = 0, exact = 0, outcome = 0, miss = 0;
-  
-  Object.keys(data).forEach(function(g) {
-    var grp = data[g];
-    grp.matches.forEach(function(m) {
-      var real = getRealScore(g, m.home, m.away);
-      if (!real || real.status !== 'finished') return;
-      total++;
-      var pts = real.score.split('-').map(Number);
-      var predBest = m.bestScore.split('-').map(Number);
-      var scoreExact = pts[0] === predBest[0] && pts[1] === predBest[1];
-      
-      var hw = parseFloat(m.winProb.homeWin);
-      var dw = parseFloat(m.winProb.draw);
-      var aw = parseFloat(m.winProb.awayWin);
-      var outcomePred = hw > dw && hw > aw ? 'H' : (aw > hw && aw > dw ? 'A' : 'D');
-      var outcomeReal = pts[0] > pts[1] ? 'H' : (pts[0] < pts[1] ? 'A' : 'D');
-      var outcomeCorrect = outcomePred === outcomeReal;
-      
-      if (scoreExact) exact++;
-      else if (outcomeCorrect) outcome++;
-      else miss++;
-    });
-  });
-  
-  if (total === 0) {
-    container.innerHTML = '<p style="color:var(--muted);font-size:14px">暂无已完赛比赛，数据积累中...</p>';
-    return;
-  }
-  
-  var accExact = (exact / total * 100).toFixed(0);
-  var accDir = (outcome / total * 100).toFixed(0);
-  var accSum = ((exact + outcome) / total * 100).toFixed(0);
-  
-  container.innerHTML = '<div class="accuracy-stats-grid">' +
-    '<div class="acc-stat-card"><div class="acc-stat-num total">' + total + '</div><div class="acc-stat-label">已完赛</div></div>' +
-    '<div class="acc-stat-card"><div class="acc-stat-num exact">' + exact + '<span style="font-size:14px;color:var(--muted)">/' + total + '</span></div><div class="acc-stat-label">精准命中</div></div>' +
-    '<div class="acc-stat-card"><div class="acc-stat-num good">' + outcome + '<span style="font-size:14px;color:var(--muted)">/' + total + '</span></div><div class="acc-stat-label">方向正确</div></div>' +
-    '<div class="acc-stat-card"><div class="acc-stat-num miss">' + miss + '<span style="font-size:14px;color:var(--muted)">/' + total + '</span></div><div class="acc-stat-label">偏差</div></div>' +
-    '</div>' +
-    '<div style="text-align:center">' +
-    '<div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-top:4px">' +
-    '<span style="background:var(--teal-dim);color:var(--teal);padding:4px 12px;border-radius:6px;font-size:12px;font-weight:700">🎯 精准 ' + accExact + '%</span>' +
-    '<span style="background:var(--lobster-dim);color:var(--lobster);padding:4px 12px;border-radius:6px;font-size:12px;font-weight:700">✅ 方向 ' + accDir + '%</span>' +
-    '<span style="background:var(--surface2);color:var(--muted);padding:4px 12px;border-radius:6px;font-size:12px;font-weight:700">📊 总正确 ' + accSum + '%</span>' +
-    '</div></div>';
+  return section;
 }
 
 // ===== 初始化 =====
@@ -545,19 +511,37 @@ async function init() {
   renderPanels();
   setupNav();
   
-  // 渲染准度板块
-  renderAccuracySection();
+  const footer = document.querySelector('.footer');
   
-  // 渲染趣闻板块
-  renderNewsSection();
+  // 插入变现板块（导流+打赏）
+  const monHtml = '<div class="monetize-banner" style="max-width:900px;margin:20px auto 24px">' +
+    '<div class="icon">🤖</div>' +
+    '<div class="text"><h3>想要自己的 AI 预测模型？</h3><p>龙虾用的就是这套 API，你也可以用它搭建自己的 AI 应用</p></div>' +
+    '<a href="http://120.26.84.145:3000" target="_blank" class="monetize-btn">获取 API →</a>' +
+    '</div>' +
+    '<div class="donate-box">' +
+    '<div class="donate-box-header">' +
+    '<span class="lobster">🦞</span>' +
+    '<h3>觉得预测还不错？</h3>' +
+    '<p>请这只努力算数据的龙虾喝一杯</p>' +
+    '</div>' +
+    '<div class="donate-box-body">' +
+    '<div class="qr-wrap"><img src="donate-qr.jpg" alt="微信收款码"></div>' +
+    '<div class="qr-label">扫码打赏 · 随缘支持</div>' +
+    '</div>' +
+    '<div class="donate-box-footer">' +
+    '<p>请 <span class="name">龙虾</span> 喝瓶<span class="beer">🍺</span></p>' +
+    '</div></div>';
   
-  // 隐藏加载
-  setTimeout(function() {
-    document.getElementById('loader').classList.add('fade-out');
-    setTimeout(function() {
-      document.getElementById('loader').style.display = 'none';
-    }, 600);
-  }, 500);
+  const monWrap = document.createElement('div');
+  monWrap.innerHTML = monHtml;
+  document.body.insertBefore(monWrap, footer);
+  
+  // 插入趣闻板块
+  const newsSec = renderNewsSection();
+  if (newsSec) {
+    document.body.insertBefore(newsSec, footer);
+  }
   
   // 隐藏加载
   setTimeout(() => {
