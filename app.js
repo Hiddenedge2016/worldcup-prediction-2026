@@ -425,7 +425,7 @@ function setupNav() {
       link.classList.add('active');
       
       const target = link.getAttribute('href').substring(1);
-      ['groups', 'knockout', 'accuracy', 'fun', 'daily', 'comments', 'about'].forEach(id => {
+      ['groups', 'knockout', 'accuracy', 'daily', 'comments', 'about'].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = (id === 'about' ? 'about' : id) === target ? 'block' : 'none';
       });
@@ -448,7 +448,6 @@ function renderNewsSection() {
   const section = document.createElement('section');
   section.className = 'section';
   section.id = 'fun';
-  section.style.display = 'none';
   
   let html = `
     <div class="section-header">
