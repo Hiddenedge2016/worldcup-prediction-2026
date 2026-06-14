@@ -512,16 +512,8 @@ async function init() {
   renderPanels();
   setupNav();
   
-  // 插入准度板块到页面
-  const footer = document.querySelector('.footer');
-  const accHtml = renderAccuracyStats();
-  if (accHtml) {
-    const temp = document.createElement('div');
-    temp.innerHTML = accHtml;
-    document.body.insertBefore(temp.firstElementChild, footer);
-  }
-  
   // 插入趣闻板块到页面
+  const footer = document.querySelector('.footer');
   const newsSec = renderNewsSection();
   if (newsSec) {
     document.body.insertBefore(newsSec, footer);

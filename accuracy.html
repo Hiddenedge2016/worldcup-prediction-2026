@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>📊 龙虾预测准度</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .acc-page { max-width: 900px; margin: 0 auto; padding: 90px 20px 60px; }
+    .acc-loading { text-align: center; padding: 60px 0; }
+    .acc-loading .spinner {
+      width: 32px; height: 32px; border: 3px solid var(--border);
+      border-top-color: var(--gold); border-radius: 50%;
+      margin: 0 auto 12px;
+      animation: spin 0.8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .section-header { margin-bottom: 24px; }
+    .accuracy-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+    @media (max-width: 640px) {
+      .accuracy-stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .acc-stat-card {
+      background: var(--bg-card);
+      border-radius: 12px;
+      padding: 20px;
+      border: 1px solid var(--border);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+    .acc-stat-card:hover { transform: translateY(-2px); }
+    .acc-stat-card .acc-stat-num { font-size: 32px; font-weight: 800; line-height: 1; margin-bottom: 4px; }
+    .acc-stat-card .acc-stat-label { font-size: 12px; color: var(--text-muted); }
+    .acc-stat-card .acc-stat-label small { font-size: 11px; opacity: 0.7; }
+    .acc-stat-card.perfect .acc-stat-num { color: var(--green); }
+    .acc-stat-card.good .acc-stat-num { color: var(--blue); }
+    .acc-stat-card.miss .acc-stat-num { color: var(--red); }
+    .acc-stat-card.overall .acc-stat-num { color: var(--gold); }
+    .acc-stat-card.overall { border-color: var(--gold-dim); }
+    .acc-details { display: flex; flex-direction: column; gap: 8px; }
+    .acc-detail-row {
+      display: flex; align-items: center; gap: 12px;
+      padding: 10px 16px; background: var(--bg-card);
+      border-radius: 8px; border: 1px solid var(--border);
+      font-size: 13px; flex-wrap: wrap;
+    }
+    .acc-detail-match { min-width: 140px; font-weight: 600; }
+    .acc-detail-pred { color: var(--text-muted); }
+    .acc-detail-real { color: var(--text-secondary); font-weight: 600; }
+    .acc-detail-badge { margin-left: auto; padding: 2px 10px; border-radius: 100px; font-size: 11px; font-weight: 700; }
+    .acc-detail-badge.perfect { background: #22c55e30; color: #22c55e; }
+    .acc-detail-badge.good { background: #3b82f630; color: #3b82f6; }
+    .acc-detail-badge.miss { background: #ef444430; color: #ef4444; }
+    .acc-detail-row.perfect { border-left: 3px solid var(--green); }
+    .acc-detail-row.good { border-left: 3px solid var(--blue); }
+    .acc-detail-row.miss { border-left: 3px solid var(--red); }
+    .acc-empty { text-align: center; padding: 40px; color: var(--text-muted); }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" style="text-decoration:none;color:var(--text)">
+        <span class="logo-icon">🦞</span>
+        <span class="logo-text">龙虾世界杯 <span class="gold">预测 2026</span></span>
+      </a>
+      <div class="nav-update">
+        <span class="update-dot"></span>
+        <span>预测准度</span>
+      </div>
+    </div>
+  </nav>
+
+  <div class="acc-page" id="app">
+    <div class="acc-loading">
+      <div class="spinner"></div>
+      <p style="color:var(--text-muted)">正在计算龙虾模型的准度...</p>
+    </div>
+  </div>
+
+  <script>
+    const FLAGS = {
+      'MEX':'🇲🇽','RSA':'🇿🇦','KOR':'🇰🇷','CZE':'🇨🇿',
+      'CAN':'🇨🇦','BIH':'🇧🇦','QAT':'🇶🇦','SUI':'🇨🇭',
+      'BRA':'🇧🇷','MAR':'🇲🇦','HAI':'🇭🇹','SCO':'🏴󠁧󠁢󠁳󠁣󠁴󠁿',
+      'USA':'🇺🇸','PAR':'🇵🇾','AUS':'🇦🇺','TUR':'🇹🇷',
+      'GER':'🇩🇪','CUW':'🇨🇼','CIV':'🇨🇮','ECU':'🇪🇨',
+      'NED':'🇳🇱','JPN':'🇯🇵','SWE':'🇸🇪','TUN':'🇹🇳',
+      'ESP':'🇪🇸','CPV':'🇨🇻','BEL':'🇧🇪','EGY':'🇪🇬',
+      'KSA':'🇸🇦','URU':'🇺🇾','NZL':'🇳🇿','POR':'🇵🇹',
+      'FRA':'🇫🇷','SEN':'🇸🇳','IRQ':'🇮🇶','NOR':'🇳🇴',
+      'ARG':'🇦🇷','ALG':'🇩🇿','JOR':'🇯🇴','AUT':'🇦🇹',
+      'COL':'🇨🇴','COD':'🇨🇩','UZB':'🇺🇿','IRN':'🇮🇷',
+      'ENG':'🏴󠁧󠁢󠁥󠁮󠁧󠁿','CRO':'🇭🇷','GHA':'🇬🇭','PAN':'🇵🇦',
+    };
+
+    function getRealScore(group, home, away, results) {
+      if (!results || !results[group]) return null;
+      return results[group].matches.find(m => m.home === home && m.away === away) || null;
+    }
+
+    function render(data, results) {
+      var total = 0, exact = 0, outcome = 0, miss = 0;
+      var details = [];
+
+      Object.keys(data).forEach(function(g) {
+        var grp = data[g];
+        grp.matches.forEach(function(m) {
+          var real = getRealScore(g, m.home, m.away, results);
+          if (!real || real.status !== 'finished') return;
+          total++;
+          var pts = real.score.split('-').map(Number);
+          var predBest = m.bestScore.split('-').map(Number);
+          var scoreExact = pts[0] === predBest[0] && pts[1] === predBest[1];
+
+          var hw = parseFloat(m.winProb.homeWin);
+          var dw = parseFloat(m.winProb.draw);
+          var aw = parseFloat(m.winProb.awayWin);
+          var outcomePred = hw > dw && hw > aw ? 'H' : (aw > hw && aw > dw ? 'A' : 'D');
+          var outcomeReal = pts[0] > pts[1] ? 'H' : (pts[0] < pts[1] ? 'A' : 'D');
+          var outcomeCorrect = outcomePred === outcomeReal;
+
+          if (scoreExact) exact++;
+          else if (outcomeCorrect) outcome++;
+          else miss++;
+
+          details.push({
+            match: (FLAGS[m.home] || m.home) + ' ' + m.homeName + ' vs ' + m.awayName + ' ' + (FLAGS[m.away] || m.away),
+            predicted: m.bestScore,
+            actual: real.score,
+            scoreExact: scoreExact,
+            outcomeCorrect: outcomeCorrect,
+            top5Includes: m.top5.some(function(t) { return t.score === real.score; })
+          });
+        });
+      });
+
+      if (total === 0) {
+        document.getElementById('app').innerHTML =
+          '<div class="section-header"><h2>📊 龙虾预测准度</h2><p style="color:var(--text-muted);font-size:14px;margin-top:8px">暂无已完赛比赛，数据积累中...</p></div>';
+        return;
+      }
+
+      var accExact = (exact / total * 100).toFixed(0);
+      var accOutcome = ((exact + outcome) / total * 100).toFixed(0);
+
+      var html = '<div class="section-header"><h2>📊 龙虾预测准度</h2><p style="color:var(--text-muted);margin-top:4px">与实际比赛结果对比 · 数据会随赛程推进实时更新</p></div>';
+      html += '<div class="accuracy-stats-grid">';
+      html += '<div class="acc-stat-card perfect"><div class="acc-stat-num">' + exact + '</div><div class="acc-stat-label">精准命中<br><small>比分完全一致</small></div></div>';
+      html += '<div class="acc-stat-card good"><div class="acc-stat-num">' + outcome + '</div><div class="acc-stat-label">方向正确<br><small>胜平负猜对</small></div></div>';
+      html += '<div class="acc-stat-card miss"><div class="acc-stat-num">' + miss + '</div><div class="acc-stat-label">预测偏差<br><small>结果不符</small></div></div>';
+      html += '<div class="acc-stat-card overall"><div class="acc-stat-num">' + accOutcome + '%</div><div class="acc-stat-label">方向准确率<br><small>' + total + '场已完赛</small></div></div>';
+      html += '</div><div class="acc-details">';
+
+      for (var i = 0; i < details.length; i++) {
+        var d = details[i];
+        var badge = d.scoreExact ? '🎯精准命中' : d.outcomeCorrect ? '✅方向对' : '❌偏差';
+        var cls = d.scoreExact ? 'perfect' : d.outcomeCorrect ? 'good' : 'miss';
+        var top5Str = d.top5Includes ? ' (Top5内有)' : '';
+        html += '<div class="acc-detail-row ' + cls + '">';
+        html += '<span class="acc-detail-match">' + d.match + '</span>';
+        html += '<span class="acc-detail-pred">预测 ' + d.predicted + '</span>';
+        html += '<span class="acc-detail-real">实际 ' + d.actual + '</span>';
+        html += '<span class="acc-detail-badge ' + cls + '">' + badge + top5Str + '</span>';
+        html += '</div>';
+      }
+      html += '</div>';
+
+      document.getElementById('app').innerHTML = html;
+    }
+
+    Promise.all([
+      fetch('predictions.json').then(function(r) { return r.json(); }),
+      fetch('results.json').catch(function() { return null; }).then(function(r) { return r ? r.json() : null; })
+    ]).then(function(res) {
+      render(res[0], res[1]);
+    }).catch(function(e) {
+      document.getElementById('app').innerHTML = '<div class="acc-empty">😿 加载失败: ' + e.message + '</div>';
+    });
+  </script>
+</body>
+</html>

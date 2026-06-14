@@ -1,0 +1,110 @@
+function renderAccuracyStats() {
+  if (!results) return '';
+  
+  let total = 0, exact = 0, outcome = 0, miss = 0;
+  const details = [];
+  
+  Object.keys(data).forEach(g => {
+    const grp = data[g];
+    grp.matches.forEach(m => {
+      const real = getRealScore(g, m.home, m.away);
+      if (!real || real.status !== 'finished') return;
+      
+      total++;
+      const pts = real.score.split('-').map(Number);
+      const predBest = m.bestScore.split('-').map(Number);
+      const scoreExact = pts[0] === predBest[0] && pts[1] === predBest[1];
+      
+      const hw = parseFloat(m.winProb.homeWin);
+      const dw = parseFloat(m.winProb.draw);
+      const aw = parseFloat(m.winProb.awayWin);
+      const outcomePred = hw > dw && hw > aw ? 'H' : (aw > hw && aw > dw ? 'A' : 'D');
+      const outcomeReal = pts[0] > pts[1] ? 'H' : (pts[0] < pts[1] ? 'A' : 'D');
+      const outcomeCorrect = outcomePred === outcomeReal;
+      
+      if (scoreExact) exact++;
+      else if (outcomeCorrect) outcome++;
+      else miss++;
+      
+      details.push({
+        match: `${FLAGS[m.home] || m.home} ${m.homeName} vs ${m.awayName} ${FLAGS[m.away] || m.away}`,
+        predicted: m.bestScore,
+        actual: real.score,
+        scoreExact,
+        outcomeCorrect,
+        top5Includes: m.top5.some(t => t.score === real.score)
+      });
+    });
+  });
+  
+  if (total === 0) return `<div class="section"><div class="section-header"><h2>📊 预测准度</h2></div><p style="color:var(--text-muted);font-size:14px">暂无已完赛比赛，数据积累中...</p></div>`;
+  
+  const accExact = (exact / total * 100).toFixed(0);
+  const accOutcome = ((exact + outcome) / total * 100).toFixed(0);
+  
+  let html = `<section class="section" id="accuracy">
+    <div class="section-header">
+      <h2>📊 龙虾预测准度</h2>
+      <p>与实际比赛结果对比 · 数据会随赛程推进实时更新</p>
+    </div>
+    
+    <div class="accuracy-stats-grid">
+      <div class="acc-stat-card perfect">
+        <div class="acc-stat-num">${exact}</div>
+        <div class="acc-stat-label">精准命中<br><small>比分完全一致</small></div>
+      </div>
+      <div class="acc-stat-card good">
+        <div class="acc-stat-num">${outcome}</div>
+        <div class="acc-stat-label">方向正确<br><small>胜平负猜对</small></div>
+      </div>
+      <div class="acc-stat-card miss">
+        <div class="acc-stat-num">${miss}</div>
+        <div class="acc-stat-label">预测偏差<br><small>结果不符</small></div>
+      </div>
+      <div class="acc-stat-card overall">
+        <div class="acc-stat-num">${accOutcome}%</div>
+        <div class="acc-stat-label">方向准确率<br><small>${total}场已完赛</small></div>
+      </div>
+    </div>
+    
+    <div class="acc-details">
+      ${details.map(d => {
+        let badge = d.scoreExact ? '🎯精准命中' : d.outcomeCorrect ? '✅方向对' : '❌偏差';
+        let cls = d.scoreExact ? 'perfect' : d.outcomeCorrect ? 'good' : 'miss';
+        const top5Str = d.top5Includes ? ' (Top5内有)' : '';
+        return `<div class="acc-detail-row ${cls}">
+          <span class="acc-detail-match">${d.match}</span>
+          <span class="acc-detail-pred">预测 ${d.predicted}</span>
+          <span class="acc-detail-real">实际 ${d.actual}</span>
+          <span class="acc-detail-badge ${cls}">${badge}${top5Str}</span>
+        </div>`;
+      }).join('')}
+    </div>
+  </section>`;
+  
+  return html;
+}
+
+// ===== 渲染所有面板 =====
+function renderPanels() {
+  const container = document.getElementById('groupPanels');
+  container.innerHTML = '';
+  
+  const groups = Object.keys(data);
+  groups.forEach((g, i) => {
+    const grp = data[g];
+    const panel = document.createElement('div');
+    panel.className = 'group-panel' + (i === 0 ? ' active' : '');
+    panel.dataset.group = g;
+    
+    const desc = document.createElement('p');
+    desc.style.cssText = 'color:var(--text-muted);font-size:13px;margin-bottom:16px';
+    desc.textContent = GROUP_NAMES[g] || g + '组';
+    panel.appendChild(desc);
+    
+    // 比赛卡片
+    const grid = document.createElement('div');
+    grid.className = 'match-grid';
+    grp.matches.forEach(m => {
+      grid.appendChild(renderMatchCard(m));
+    });
