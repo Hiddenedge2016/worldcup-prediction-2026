@@ -36,16 +36,19 @@ const GROUP_NAMES = {
 
 let data = null;
 let results = null;
+let news = null;
 
 // ===== 加载数据 =====
 async function loadData() {
   try {
-    const [predResp, resResp] = await Promise.all([
+    const [predResp, resResp, newsResp] = await Promise.all([
       fetch('predictions.json'),
-      fetch('results.json').catch(() => null)
+      fetch('results.json').catch(() => null),
+      fetch('news.json').catch(() => null)
     ]);
     data = await predResp.json();
     if (resResp) results = await resResp.json();
+    if (newsResp) news = await newsResp.json();
     return true;
   } catch (e) {
     console.error('加载数据失败:', e);
@@ -422,16 +425,73 @@ function setupNav() {
       link.classList.add('active');
       
       const target = link.getAttribute('href').substring(1);
-      ['groups', 'knockout', 'accuracy', 'about'].forEach(id => {
+      ['groups', 'knockout', 'accuracy', 'fun', 'about'].forEach(id => {
         const el = document.getElementById(id);
         if (el) el.style.display = (id === 'about' ? 'about' : id) === target ? 'block' : 'none';
       });
       
-      // 特殊处理 accuracy
+      // 特殊处理 accuracy 和 fun
       const accSec = document.getElementById('accuracy');
       if (accSec) accSec.style.display = target === 'accuracy' ? 'block' : 'none';
+      const funSec = document.getElementById('fun');
+      if (funSec) funSec.style.display = target === 'fun' ? 'block' : 'none';
     });
   });
+}
+
+// ===== 渲染趣闻板块 =====
+function renderNewsSection() {
+  if (!news || !news.headlines || news.headlines.length === 0) return null;
+  
+  const sorted = [...news.headlines].sort((a, b) => new Date(b.date) - new Date(a.date));
+  
+  const section = document.createElement('section');
+  section.className = 'section';
+  section.id = 'fun';
+  section.style.display = 'none';
+  
+  let html = `
+    <div class="section-header">
+      <h2>🎪 世界杯趣闻</h2>
+      <p>赛场外的花絮、奇葩、冷知识 · 每日更新</p>
+    </div>
+    <div class="fun-grid">`;
+  
+  sorted.forEach(item => {
+    const dateLabel = item.date.replace(/^2026-/, '');
+    
+    let tagClass = 'fun-tag';
+    const tagColors = {
+      '离谱': 'tag-insane', '翻车': 'tag-wtf', '狠': 'tag-brutal',
+      '惨': 'tag-ouch', '魔性': 'tag-funny', '潮流': 'tag-cool',
+      '玄学': 'tag-mystic', '暴力': 'tag-brutal', '传奇': 'tag-legacy',
+      '争议': 'tag-hot', '强势': 'tag-strong', '纪录': 'tag-legacy'
+    };
+    if (tagColors[item.tag]) tagClass += ' ' + tagColors[item.tag];
+    
+    html += `
+      <div class="fun-card">
+        <div class="fun-emoji">${item.emoji || '⚽'}</div>
+        <div class="fun-body">
+          <div class="fun-meta">
+            <span class="${tagClass}">${item.tag}</span>
+            <span class="fun-date">${dateLabel}</span>
+          </div>
+          <h3 class="fun-title">${item.title}</h3>
+          <p class="fun-summary">${item.summary}</p>
+        </div>
+      </div>`;
+  });
+  
+  html += `
+    </div>
+    <div class="fun-footer">
+      <span>🦞 趣闻每日更新 · 来源综合各大媒体</span>
+    </div>
+  </section>`;
+  
+  section.innerHTML = html;
+  return section;
 }
 
 // ===== 初始化 =====
@@ -457,6 +517,12 @@ async function init() {
     const temp = document.createElement('div');
     temp.innerHTML = accHtml;
     document.body.insertBefore(temp.firstElementChild, footer);
+  }
+  
+  // 插入趣闻板块到页面
+  const newsSec = renderNewsSection();
+  if (newsSec) {
+    document.body.insertBefore(newsSec, footer);
   }
   
   // 隐藏加载

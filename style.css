@@ -680,3 +680,88 @@ body {
 
 /* ===== 工具类 ===== */
 .gold { color: var(--gold); }
+
+/* ===== 趣闻板块 ===== */
+.fun-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+@media (max-width: 640px) {
+  .fun-grid { grid-template-columns: 1fr; }
+}
+
+.fun-card {
+  display: flex;
+  gap: 14px;
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  transition: all 0.3s;
+  align-items: flex-start;
+}
+.fun-card:hover {
+  border-color: var(--border-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+.fun-emoji {
+  font-size: 28px;
+  line-height: 1;
+  min-width: 36px;
+  text-align: center;
+  margin-top: 2px;
+}
+.fun-body { flex: 1; }
+.fun-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+.fun-tag {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+.fun-tag.tag-insane { background: #a855f730; color: #a855f7; }
+.fun-tag.tag-wtf { background: #f9731630; color: #f97316; }
+.fun-tag.tag-brutal { background: #ef444430; color: #ef4444; }
+.fun-tag.tag-ouch { background: #6366f130; color: #6366f1; }
+.fun-tag.tag-funny { background: #eab30830; color: #eab308; }
+.fun-tag.tag-cool { background: #06b6d430; color: #06b6d4; }
+.fun-tag.tag-mystic { background: #8b5cf630; color: #8b5cf6; }
+.fun-tag.tag-legacy { background: #f59e0b30; color: #f59e0b; }
+.fun-tag.tag-hot { background: #ff6b6b30; color: #ff6b6b; }
+.fun-tag.tag-strong { background: #22c55e30; color: #22c55e; }
+.fun-date {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-left: auto;
+}
+.fun-title {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+.fun-summary {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+.fun-footer {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 12px;
+  color: var(--text-muted);
+  padding: 12px;
+  background: var(--bg-card);
+  border-radius: 8px;
+  border: 1px dashed var(--border);
+}
