@@ -548,8 +548,7 @@ async function init() {
   // 渲染准度板块
   renderAccuracySection();
   
-  // 渲染趣闻板块
-  renderNewsSection();
+
   
   // 隐藏加载
   setTimeout(function() {
